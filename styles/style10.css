@@ -1,0 +1,218 @@
+.anoseis {
+  position: absolute;
+  top: 70%;
+  left: 36.5%;
+  width: 5%;
+  height: auto;
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  z-index: 4;
+  text-align: center;
+}
+.anoseis h3 {
+  color: var(--bege);
+  font-family: "Bodoni Moda", sans-serif;
+  font-size: 9rem;
+  font-weight: 900;
+  line-height: 90%;
+  text-shadow: rgba(3, 3, 3, 0.682) 0px 3px 8px;
+}
+.imgseis {
+  position: absolute;
+  top: 70%;
+  left: 1%;
+  width: 15%;
+  height: auto;
+  z-index: 4;
+}
+.anosete {
+  position: absolute;
+  top: 84%;
+  left: 30.5%;
+  width: 15%;
+  height: auto;
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  z-index: 4;
+  text-align: center;
+}
+.anosete h3 {
+  color: var(--bege);
+  font-family: "Bodoni Moda", sans-serif;
+  font-size: 9rem;
+  font-weight: 900;
+  line-height: 90%;
+  text-shadow: rgba(3, 3, 3, 0.682) 0px 3px 8px;
+}
+.imgsete {
+  position: absolute;
+  top: 81%;
+  left: 38%;
+  width: 15%;
+  height: auto;
+}
+.ldts img {
+  width: 300%;
+}
+.imgsete img {
+  width: 420% !important;
+}
+.titleldt {
+  font-size: 6rem;
+  font-family: "League Gothic", sans-serif;
+  font-weight: 500;
+}
+.titleldt span {
+  font-family: "League Gothic", sans-serif;
+  color: var(--red);
+}
+.textldt {
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3rem;
+}
+.textum {
+  position: absolute;
+  top: 10%;
+  left: 11.5%;
+  text-align: end !important;
+  word-wrap: break-word;
+  max-width: 17%;
+}
+.texttres {
+  position: absolute;
+  top: 34%;
+  left: 11.5%;
+  text-align: end !important;
+  word-wrap: break-word;
+  max-width: 17%;
+}
+.textcinco {
+  position: absolute;
+  top: 58%;
+  left: 11.5%;
+  text-align: end !important;
+  word-wrap: break-word;
+  max-width: 17%;
+}
+.textsete {
+  position: absolute;
+  top: 84%;
+  left: 11.5%;
+  text-align: end !important;
+  word-wrap: break-word;
+  max-width: 17%;
+}
+.textdois {
+  position: absolute;
+  top: 22%;
+  left: 48%;
+  text-align: start !important;
+  word-wrap: break-word;
+  max-width: 22%;
+}
+.textquatro {
+  position: absolute;
+  top: 46%;
+  left: 48%;
+  text-align: start !important;
+  word-wrap: break-word;
+  max-width: 22%;
+}
+.textseis {
+  position: absolute;
+  top: 70%;
+  left: 48%;
+  text-align: start !important;
+  word-wrap: break-word;
+  max-width: 22%;
+}
+.apareceu {
+  animation: up 0.8s forwards;
+}
+.fimdaguerra .textum,
+.fimdaguerra .textdois,
+.fimdaguerra .texttres,
+.fimdaguerra .textquatro,
+.fimdaguerra .textcinco,
+.fimdaguerra .textseis,
+.fimdaguerra .textsete,
+.fimdaguerra .anoum,
+.fimdaguerra .anodois,
+.fimdaguerra .anotres,
+.fimdaguerra .anoquatro,
+.fimdaguerra .anocinco,
+.fimdaguerra .anoseis,
+.fimdaguerra .anosete,
+.fimdaguerra .imgum,
+.fimdaguerra .imgdois,
+.fimdaguerra .imgtres,
+.fimdaguerra .imgquatro,
+.fimdaguerra .imgcinco,
+.fimdaguerra .imgseis,
+.fimdaguerra .imgsete {
+  opacity: 0;
+  transform: translateY(40px);
+  visibility: hidden;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fimdaguerra .apareceu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible; 
+}
+.btnflutuante{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 5000;
+  width: 60px;
+  height: 60px;
+  background:rgba(0,0,0,0.3);
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.btnflutuante:hover{
+animation: btnflutuante 1.5s ease;
+cursor: grab;
+}
+.btnflutuante:active{
+transform: scale(1.2);
+cursor: grabbing;
+transition: all 0.2s ease-in-out;
+}
+@keyframes btnflutuante {
+  0%, 100%{
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(360deg) scale(1.2);
+  }
+}
+ #caixaAjuda {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid var(--gold);
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: none;
+    z-index: 9999;
+    letter-spacing: 1.5px;
+    color:var(--gold);
+    font-style: italic;
+    cursor: cell;
+  }

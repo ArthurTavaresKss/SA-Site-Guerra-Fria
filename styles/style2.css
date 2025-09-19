@@ -1,0 +1,380 @@
+:root {
+  --red: #d62828;
+  --azul: #003049;
+  --gold: #fcbf49;
+  --black: #1c1c1c;
+  --bege: #f0e1c6;
+  --blazul: #0d1117;
+}
+@keyframes flecha {
+  0%,
+  100% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(60px);
+  }
+}
+.flecha {
+  margin-top: 10px;
+  width: 30px;
+  height: auto;
+  animation: flecha 5s infinite;
+  cursor: pointer;
+}
+.painel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 3rem 2rem 2rem;
+}
+.blocoeua {
+  background: #0a2e52;
+  border: 2px solid #1e90ff;
+}
+.bloconeutro {
+  background: #2f2f2f;
+  border: 2px solid #aaaaaa;
+}
+.blocourss {
+  background: #520a0a;
+  border: 2px solid #ff4040;
+}
+.blocoeua .cabecalho {
+  background: #1e90ff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.7rem;
+}
+.bloconeutro .cabecalho {
+  background: #aaaaaa;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.7rem;
+}
+.blocourss .cabecalho {
+  background: #ff4040;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.7rem;
+}
+.li p {
+  position: relative;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: white;
+  line-height: 1.8;
+}
+.li p::after {
+  content: attr(data-info);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 6px 8px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.li p:hover::after {
+  opacity: 1;
+}
+.li p:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 3px currentColor;
+}
+.li {
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.li::-webkit-scrollbar {
+  width: 8px;
+}
+.li::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+.li::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.tabela {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.5s ease-in-out;
+  position: absolute;
+  left: 50%;
+  transform: translateX(100%);
+  width: 80%;
+  pointer-events: none;
+}
+.tabela.ativo {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  transform: translateX(-50%);
+}
+.tabelas {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px) scale(1);
+}
+.bipolartext.apareceu {
+  animation: up 0.5s ease forwards;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.timeline.apareceu {
+  animation: up 0.5s ease forwards;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.tabelas.apareceu {
+  animation: up 0.5s ease forwards;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.cortina {
+  background: var(--blazul);
+}
+.muro {
+  background: url("/imgs/fundomuro.webp");
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+  border: 4px solid #8b2e2e;
+  border-style: dashed;
+  transition: all 0.8s ease-out;
+  opacity: 0;
+  transform: translateY(100px) scale(1);
+}
+.muro.apareceu {
+  animation: up 0.2s ease forwards;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.muro h2 {
+  font: 4rem "Bebas Neue", sans-serif;
+  margin-bottom: 0.5rem;
+  color: var(--red);
+}
+.muro p {
+  font: 1.5rem "Roboto", sans-serif;
+  opacity: 0.9;
+  color: #444;
+}
+.tv-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px;
+  min-height: 100vh;
+  background:linear-gradient(rgba(0, 0, 0, 0.258), rgba(0, 0, 0, 0.203)), url('/imgs/fundotv.png');
+  background-size: cover;
+  position: relative;
+  transition: all 0.8s ease-out;
+  opacity: 0;
+  transform: translateY(70px) scale(1);
+}
+.tv-section.apareceu {
+  animation: up 0.5s ease forwards;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.tv-frame {
+  background: linear-gradient(160deg, #5c3a21, #3e2515, #2a170f);
+  border: 12px solid #1a0e0e;
+  border-radius: 25px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.967);
+  padding: 25px;
+  width: 780px;
+  position: relative;
+}
+.tv-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+.tv-frame::before,
+.tv-frame::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  width: 60px;
+  height: 20px;
+  background: #1a0e0e;
+  border-radius: 5px;
+}
+.tv-frame::before {
+  left: 40px;
+}
+.tv-frame::after {
+  right: 40px;
+}
+.tv-screen {
+  background: radial-gradient(circle at center, #014d35 0%, #001a0d 90%);
+  border: 10px solid #0d0d0d;
+  border-radius: 22px;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.tv-screen img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: contrast(1.1) saturate(0.95);
+  transition: opacity 0.6s ease-in-out;
+}
+.scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 255, 0, 0.15) 0px,
+    rgba(0, 255, 0, 0.15) 2px,
+    transparent 3px,
+    transparent 5px
+  );
+  pointer-events: none;
+}
+.tv-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  gap: 75px;
+  flex-wrap: wrap;
+}
+.btn-power {
+  background: linear-gradient(145deg, #444, #111);
+  color: #e74c3c;
+  border: 2px solid #000;
+  border-radius: 6px;
+  width: 70px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.7),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.2), 0 3px 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease-in-out;
+}
+.btn-power:active {
+  transform: translateY(2px);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.btn-round {
+  background: radial-gradient(circle at 30% 30%, #777 0%, #222 80%);
+  color: #00ff7f;
+  border: 3px solid #111;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-family: "Special Elite", monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset -3px -3px 6px rgba(0, 0, 0, 0.6),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.2), 0 4px 6px rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease-in-out;
+}
+.btn-round:hover {
+  transform: scale(1.05);
+  cursor: grab;
+}
+.btn-round:active {
+  transform: scale(0.9);
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.6);
+  cursor: grabbing;
+}
+.volume-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.btn-small {
+  background: linear-gradient(145deg, #666, #222);
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.7),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.2), 0 3px 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease-in-out;
+}
+.btn-small:active {
+  transform: scale(0.9);
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+.tv-antenna {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.tv-antenna-base {
+  width: 10px;
+  height: 30px;
+  background-color: #5d4037;
+  border: 2px solid #3e2723;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tv-antenna-arm {
+  width: 100px;
+  height: 2px;
+  background-color: #8c8c8c;
+  transform-origin: left;
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+.tv-antenna-arm.left {
+  transform: rotate(-150deg);
+}
+.tv-antenna-arm.right {
+  transform: rotate(-30deg);
+}
+.tv-hud {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-family: "Special Elite", monospace;
+  font-size: 22px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease-in-out;
+}
+.tv-hud.mostrar {
+  opacity: 1;
+}

@@ -1,0 +1,304 @@
+:root {
+  --red: #d62828;
+  --azul: #003049;
+  --gold: #fcbf49;
+  --black: #1c1c1c;
+  --bege: #f0e1c6;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  background: #0d1117;
+  cursor: default;
+}
+header {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+header section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1800px;
+  padding: 0.5rem 3rem;
+  margin: 0 auto;
+}
+header section div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+#logo {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  opacity: 1 !important;
+}
+#menu {
+  width: 45px;
+  height: auto;
+  cursor: pointer;
+}
+#logo:hover {
+  transform: scale(1.1);
+}
+.home {
+  background: url("/imgs/fund.png");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.texthome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 190px;
+}
+#title {
+  font-family: "League Gothic", sans-serif;
+  color: var(--bege);
+  font-size: 10em;
+  transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px) scale(1);
+}
+#subtitle {
+  font-family: "Oswald", sans-serif;
+  color: var(--bege);
+  font-size: 3em;
+  transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px) scale(1);
+}
+.btn:hover {
+  background: var(--bege);
+  color: var(--azul);
+  transform: translateY(0) scale(1.08);
+  transition: all 0.5s linear;
+  border-radius: 2px;
+}
+.btn {
+  background: transparent;
+  color: var(--bege);
+  border: 2px solid var(--bege);
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 8px;
+  margin-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 200px;
+  height: 40px;
+  transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
+}
+#title.apareceu {
+  animation: up 1s ease forwards;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+#subtitle.apareceu {
+  animation: up 1s ease forwards;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.btn.apareceu {
+  animation: up 1s ease forwards;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#menu-btn {
+  position: fixed;
+  top: 0.7rem;
+  right: 3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20000;
+  transition: transform 0.3s ease;
+}
+#menu-btn img {
+  width: 40px;
+  height: 40px;
+}
+#menu-btn.close-mode {
+  transform: rotate(90deg);
+}
+#side-menu {
+  position: fixed;
+  top: 0;
+  right: -500px;
+  width: 300px;
+  max-width: 80%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
+  z-index: 10000;
+  overflow-y: auto;
+  padding-top: 4rem;
+  border-radius: 24px 0 0 0;
+  overflow-x: hidden;
+}
+#side-menu.open {
+  right: 0;
+}
+#side-menu a {
+  color: white;
+  display: block;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: background 0.2s ease;
+  font-weight: 500;
+  line-height: 40px;
+}
+#side-menu a:hover {
+  border: 3px solid #222;
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.3);
+}
+.conteudo {
+  border-top: 2px solid #2e2d2d;
+}
+.mundobi {
+  background: #0d1117;
+  color: #e6e6e6;
+  padding: 0 0 6rem 0;
+}
+.bipolartext span {
+  color: var(--red);
+  font-family: "Bebas Neue", sans-serif;
+}
+.bipolartext {
+  color: var(--azul);
+  font-size: 60px;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  padding-top: 85px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px) scale(1);
+}
+.timeline {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+  background: #1b202b60;
+  width: 900px;
+  height: 80px;
+  border-radius: 8px;
+  margin: 30px auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px) scale(1);
+}
+.timeline button.ativo {
+  background: var(--red);
+  transform: scale(1.1);
+  border: none;
+  color: var(--s);
+  font-weight: 800;
+  box-shadow: 0 0 25px 5px rgba(255, 2, 2, 0.248);
+  transition: all 0.3s linear;
+}
+.timelineselect {
+  width: 75px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  background: #0d1117;
+  border: 1px solid var(--red);
+  color: var(--bege);
+}
+.timelineselect:hover {
+  background: var(--red);
+  transform: scale(1.1);
+  border: none;
+  color: var(--s);
+  font-weight: 800;
+  box-shadow: 0 0 25px 5px rgba(255, 2, 2, 0.223);
+  transition: all 0.3s linear;
+}
+.legenda {
+  background-color: #012d0a;
+  border: 4px solid #012d0a;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 1.4rem;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.05) 10%,
+      transparent 40%
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.12) 0px,
+      rgba(0, 0, 0, 0.12) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  background-blend-mode: overlay;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.6),
+    inset 0 0 20px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 750px;
+  margin: 0 auto;
+}
+.box p {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-weight: 200;
+}
+.box p span {
+  font-family: "Bebas Neue", sans-serif;
+  color: #00b7ff;
+}
+.box p strong {
+  font-family: "Bebas Neue", sans-serif;
+  color: #ff4040;
+}

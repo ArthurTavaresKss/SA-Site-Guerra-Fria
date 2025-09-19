@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>O DIÁRIO HISTÓRICO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&family=Special+Elite&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+
+        header{
+      position: relative;
+    }
+    .voltar{
+      position: absolute;
+      left: -1%;
+      top: -15%;
+    }
+    .voltar:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: all 0.5s ease;
+    }
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: #3d3a33;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      color: #1a1a1a;
+      font-size: 16px;
+    }
+
+    .jornal {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px;
+      background-color: #f2e6c9; /* Cor de papel envelhecido */
+      border: 1px solid #000;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    }
+
+    /* --- CABEÇALHO DO JORNAL --- */
+    .cabecalho {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 4px double #000;
+      margin-bottom: 20px;
+    }
+
+    .nome-jornal {
+      font-family: 'Oswald', sans-serif;
+      font-size: 100px;
+      margin: 0;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .meta-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Special Elite', monospace;
+      font-size: 15px;
+      margin-top: 10px;
+      padding: 0 10px;
+    }
+
+    /* --- CONTEÚDO E COLUNAS --- */
+    .conteudo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .colunas {
+      column-count: 3;
+      column-gap: 40px;
+      column-rule: 1px solid #ccc;
+    }
+
+    .manchete-principal {
+      font-family: 'Oswald', sans-serif;
+      font-size: 64px;
+      text-align: center;
+      line-height: 1.1;
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
+      column-span: all;
+    }
+
+    .subtitulo-artigo {
+      font-style: italic;
+      text-align: center;
+      font-size: 20px;
+      margin: 0 0 20px 0;
+      column-span: all;
+      border-bottom: 1px solid #000;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .colunas p {
+      text-align: justify;
+      margin-top: 0;
+    }
+
+    .colunas p.primeiro-paragrafo::first-letter {
+      font-size: 48px;
+      font-weight: bold;
+      float: left;
+      margin-right: 5px;
+      line-height: 0.8;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    /* --- IMAGENS E LEGENDAS --- */
+    figure {
+      margin: 0 0 20px 0;
+      break-inside: avoid;
+    }
+
+    .foto {
+      width: 100%;
+      filter: grayscale(100%) contrast(110%) brightness(95%);
+      border: 1px solid #000;
+      padding: 4px;
+      background: #fff;
+    }
+
+    figcaption {
+      font-size: 13px;
+      text-align: center;
+      margin-top: 5px;
+      font-style: italic;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    /* --- SEPARADORES E TÍTULOS SECUNDÁRIOS --- */
+    .separador {
+        border: 0;
+        border-top: 2px solid #000;
+        margin: 25px 0;
+        width: 100%;
+    }
+
+    .artigo-secundario h3 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 28px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    /* --- NOVOS ELEMENTOS --- */
+    /* Caixa de Destaque para notícias curtas */
+    .caixa-destaque {
+        border: 1px solid #555;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        margin-top: 20px;
+        break-inside: avoid;
+    }
+    .caixa-destaque h4 {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 0 0 10px 0;
+        text-align: center;
+        border-bottom: 1px solid #888;
+        padding-bottom: 5px;
+    }
+    .caixa-destaque p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    /* Bloco de Anúncio */
+    .anuncio {
+        border: 2px dashed #333;
+        padding: 15px;
+        text-align: center;
+        margin-top: 20px;
+        break-inside: avoid;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    .anuncio p {
+        font-family: 'Special Elite', monospace;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+    .anuncio .produto {
+        font-family: 'Oswald', sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="jornal">
+    <header class="cabecalho">
+      <a href="/index.html">
+            <div class="voltar">
+        <img src="/imgs/voltar.png" alt="↩️" width="90px" height="auto">
+      </div>
+      </a>
+      <h1 class="nome-jornal">O Diário Histórico</h1>
+      <div class="meta-info">
+        <span>SEGUNDA-FEIRA, 5 DE NOVEMBRO DE 1956</span>
+        <span>EDIÇÃO EXTRAORDINÁRIA - Nº 895</span>
+      </div>
+    </header>
+
+    <div class="conteudo">
+      <h2 class="manchete-principal">CRISE DE SUEZ: CONFLITO NO CANAL ABALA O MUNDO PÓS-GUERRA</h2>
+      <p class="subtitulo-artigo">Egito nacionaliza o Canal de Suez e provoca intervenção militar do Reino Unido, França e Israel. ONU intervém para conter escalada.</p>
+
+      <div class="colunas">
+        <p class="primeiro-paragrafo">
+          A Crise de Suez, também conhecida como Segunda Guerra Árabe-Israelense, eclodiu em outubro de 1956 após a decisão do presidente egípcio Gamal Abdel Nasser de nacionalizar o Canal de Suez, até então controlado por empresas britânicas e francesas. A medida gerou uma ofensiva militar organizada por Reino Unido, França e Israel, criando um dos maiores impasses geopolíticos da Guerra Fria.
+        </p>
+        <p>
+          O canal, considerado uma rota estratégica para o transporte de petróleo e comércio internacional, era vital para a economia europeia. A nacionalização por parte do Egito ameaçou os interesses ocidentais e aumentou as tensões com Israel, que buscava enfraquecer o controle egípcio na região.
+        </p>
+
+        <figure>
+          <img class="foto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Tanks_Destroyed_Sinai.jpg/1200px-Tanks_Destroyed_Sinai.jpg">
+          <figcaption>Tropas britânicas avançam na região do Canal de Suez durante a ofensiva de 19</figcaption>
+        </figure>
+
+        <p>
+          A ofensiva militar começou em 29 de outubro de 1956, com Israel invadindo a Península do Sinai, seguido pelo desembarque de forças britânicas e francesas. No entanto, a forte pressão da ONU, dos Estados Unidos e da União Soviética obrigou os invasores a recuar.
+        </p>
+
+        <div class="artigo-secundario">
+            <hr class="separador">
+            <h3>ONU INTERVÉM E FORÇA RETIRADA DAS TROPAS</h3>
+            <p>
+                A Organização das Nações Unidas desempenhou um papel fundamental ao pressionar os países envolvidos para um cessar-fogo imediato. Foi criada a Força de Emergência das Nações Unidas (UNEF), primeira missão de paz da ONU, para monitorar a retirada das tropas estrangeiras e estabilizar a região.
+            </p>
+        </div>
+
+        <div class="caixa-destaque">
+            <h4>NOTÍCIAS INTERNACIONAIS</h4>
+            <p><strong>EUA:</strong> Washington se opôs à ação militar de seus aliados e exigiu negociações diplomáticas, temendo um confronto direto com a URSS.</p>
+            <p><strong>URSS:</strong> Moscou ameaçou intervir militarmente em defesa do Egito, aumentando o risco de uma escalada nuclear durante a Guerra Fria.</p>
+        </div>
+
+        <p>
+          A crise terminou oficialmente em março de 1957, quando as forças invasoras deixaram o território egípcio e o Canal de Suez voltou ao controle do país. O episódio reforçou o prestígio de Nasser no mundo árabe e representou um marco na luta dos países em desenvolvimento contra o neocolonialismo europeu.
+        </p>
+        
+        <figure>
+            <img class="foto" src="https://www.monitordooriente.com/wp-content/uploads/2023/01/GettyImages-51953392-e1612799162465.webp">
+            <figcaption>O presidente egípcio Gamal Abdel Nasser anuncia a nacionalização do Canal de Suez, em julho de 1956.</figcaption>
+        </figure>
+
+        <div class="anuncio">
+            <p class="produto">RÁDIO CONTINENTAL</p>
+            <p>Acompanhe as últimas notícias da crise no Egito com som cristalino.</p>
+            <p>Disponível nas principais lojas de eletrônicos do país.</p>
+        </div>
+
+        <div class="artigo-secundario">
+            <hr class="separador">
+            <h3>SUEZ: UM NOVO EQUILÍBRIO DE PODERES</h3>
+            <p>
+                A Crise de Suez enfraqueceu politicamente Reino Unido e França, enquanto consolidou a influência dos Estados Unidos e da URSS no Oriente Médio. O episódio marcou o início de uma nova fase da Guerra Fria e redefiniu os alinhamentos geopolíticos da região.
+        </div>
+
+      </div> </div> </div> </body>
+</html>

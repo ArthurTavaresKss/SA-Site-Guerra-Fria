@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>O DIÁRIO HISTÓRICO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&family=Special+Elite&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: #3d3a33;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      color: #1a1a1a;
+      font-size: 16px;
+    }
+
+    .jornal {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px;
+      background-color: #f2e6c9; /* Cor de papel envelhecido */
+      border: 1px solid #000;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    }
+
+    /* --- CABEÇALHO DO JORNAL --- */
+    .cabecalho {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 4px double #000;
+      margin-bottom: 20px;
+    }
+
+    .nome-jornal {
+      font-family: 'Oswald', sans-serif;
+      font-size: 100px;
+      margin: 0;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .meta-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Special Elite', monospace;
+      font-size: 15px;
+      margin-top: 10px;
+      padding: 0 10px;
+    }
+
+    /* --- CONTEÚDO E COLUNAS --- */
+    .conteudo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .colunas {
+      column-count: 3;
+      column-gap: 40px;
+      column-rule: 1px solid #ccc;
+    }
+
+    .manchete-principal {
+      font-family: 'Oswald', sans-serif;
+      font-size: 64px;
+      text-align: center;
+      line-height: 1.1;
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
+      column-span: all;
+    }
+
+    .subtitulo-artigo {
+      font-style: italic;
+      text-align: center;
+      font-size: 20px;
+      margin: 0 0 20px 0;
+      column-span: all;
+      border-bottom: 1px solid #000;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .colunas p {
+      text-align: justify;
+      margin-top: 0;
+    }
+
+    .colunas p.primeiro-paragrafo::first-letter {
+      font-size: 48px;
+      font-weight: bold;
+      float: left;
+      margin-right: 5px;
+      line-height: 0.8;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    /* --- IMAGENS E LEGENDAS --- */
+    figure {
+      margin: 0 0 20px 0;
+      break-inside: avoid;
+    }
+
+    .foto {
+      width: 100%;
+      filter: grayscale(100%) contrast(110%) brightness(95%);
+      border: 1px solid #000;
+      padding: 4px;
+      background: #fff;
+    }
+
+    figcaption {
+      font-size: 13px;
+      text-align: center;
+      margin-top: 5px;
+      font-style: italic;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    /* --- SEPARADORES E TÍTULOS SECUNDÁRIOS --- */
+    .separador {
+        border: 0;
+        border-top: 2px solid #000;
+        margin: 25px 0;
+        width: 100%;
+    }
+
+    .artigo-secundario h3 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 28px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    /* --- NOVOS ELEMENTOS --- */
+    /* Caixa de Destaque para notícias curtas */
+    .caixa-destaque {
+        border: 1px solid #555;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        margin-top: 20px;
+        break-inside: avoid;
+    }
+    .caixa-destaque h4 {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 0 0 10px 0;
+        text-align: center;
+        border-bottom: 1px solid #888;
+        padding-bottom: 5px;
+    }
+    .caixa-destaque p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    /* Bloco de Anúncio */
+    .anuncio {
+        border: 2px dashed #333;
+        padding: 15px;
+        text-align: center;
+        margin-top: 20px;
+        break-inside: avoid;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    .anuncio p {
+        font-family: 'Special Elite', monospace;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+    .anuncio .produto {
+        font-family: 'Oswald', sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    header{
+      position: relative;
+    }
+    .voltar{
+      position: absolute;
+      left: -1%;
+      top: -15%;
+    }
+    .voltar:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: all 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="jornal">
+    <header class="cabecalho">
+      <a href="/index.html">
+            <div class="voltar">
+        <img src="/imgs/voltar.png" alt="↩️" width="90px" height="auto">
+      </div>
+      </a>
+      <h1 class="nome-jornal">O Diário Histórico</h1>
+      <div class="meta-info">
+        <span>QUARTA-FEIRA, 5 DE JULHO DE 1978</span>
+        <span>EDIÇÃO ESPECIAL - Nº 1441</span>
+      </div>
+    </header>
+
+    <div class="conteudo">
+      <h2 class="manchete-principal">ETIÓPIA DERROTA A SOMÁLIA NA GUERRA DO OGADEN</h2>
+      <p class="subtitulo-artigo">Conflito entre vizinhos africanos atrai apoio da União Soviética e de Cuba para a Etiópia e expõe a fragilidade da Somália.</p>
+
+      <div class="colunas">
+        <p class="primeiro-paragrafo">
+          A Guerra do Ogaden, iniciada em julho de 1977, opôs a Somália e a Etiópia pelo controle da região estratégica de Ogaden, de maioria étnica somali. A disputa rapidamente ganhou escala internacional, envolvendo superpotências da Guerra Fria e tropas estrangeiras.
+        </p>
+        <p>
+          A Somália, liderada pelo presidente Siad Barre, invadiu a região do Ogaden buscando anexá-la ao seu território. Inicialmente, as forças somalis obtiveram avanços significativos, mas a situação mudou drasticamente quando a União Soviética e Cuba decidiram apoiar massivamente a Etiópia.
+        </p>
+
+        <figure>
+          <img class="foto" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj46uT3RiF8oaeoaIu7XC6qJvPf5WrCXEgWtGGj5FzHb7UI0YZHVpALOO7A4f-nIpttD631cU-F8LmF_I7tQeWvTErAECc0-6Jm0_19Ir2W4XW9L6Qk83z4Uics9ev5dl3SA7y7/s1600/Martin-B-10-14.JPG">
+          <figcaption>Tropas etíopes marcham rumo à linha de frente durante a Guerra do Ogaden, 1977.</figcaption>
+        </figure>
+
+        <p>
+          O governo etíope, sob comando de Mengistu Haile Mariam, recebeu armamentos modernos, aviões de combate e mais de 15 mil soldados cubanos. Com esse reforço, as tropas etíopes conseguiram contra-atacar e retomar o controle do território no início de 1978.
+        </p>
+
+        <div class="artigo-secundario">
+            <hr class="separador">
+            <h3>CUBA E URSS DECIDEM O CONFLITO</h3>
+            <p>
+                A presença de tropas cubanas e apoio logístico soviético foi decisiva para a vitória etíope. Os Estados Unidos, que inicialmente forneciam assistência à Somália, reduziram seu envolvimento após perceberem que o conflito poderia escalar para um embate direto entre superpotências.
+            </p>
+        </div>
+
+        <div class="caixa-destaque">
+            <h4>NOTÍCIAS INTERNACIONAIS</h4>
+            <p><strong>URSS:</strong> Fornece armamentos modernos, blindados e caças para as forças etíopes.</p>
+            <p><strong>EUA:</strong> Reduzem o apoio à Somália e priorizam negociações diplomáticas para encerrar a guerra.</p>
+            <p><strong>CUBA:</strong> Envia milhares de soldados e instrutores militares para apoiar a Etiópia.</p>
+        </div>
+
+        <p>
+          O conflito terminou oficialmente em março de 1978, com a retirada das forças somalis. Apesar da derrota, a Somália manteve tensões com a Etiópia, e a região do Ogaden permanece instável até hoje, sendo palco de conflitos separatistas e disputas por recursos naturais.
+        
+        <figure>
+            <img class="foto" src="https://www.abrilabril.pt/sites/default/files/styles/node_aberto_vp768/public/assets/img/12873.jpg?itok=epWP5rvq">
+            <figcaption>Soldados cubanos em apoio às tropas etíopes durante a Batalha de Jijiga, 1978.</figcaption>
+        </figure>
+
+        <div class="anuncio">
+            <p class="produto">MAPA MUNDIAL 1978 – EDIÇÃO DE LUXO</p>
+            <p>Acompanhe todos os conflitos globais com detalhes atualizados. Capa dura, impressão de alta qualidade e design histórico.</p>
+            <p>Disponível nas principais livrarias do país.</p>
+        </div>
+
+        <div class="artigo-secundario">
+            <hr class="separador">
+            <h3>SOMÁLIA ENFRENTA CRISE POLÍTICA APÓS DERROTA</h3>
+            <p>
+                A derrota enfraqueceu o governo de Siad Barre, que perdeu o apoio soviético e mergulhou o país em instabilidade política. O conflito também fortaleceu a presença militar cubana e soviética na África, ampliando a influência da URSS na região.
+            </p>
+        </div>
+
+      </div> </div> </div> </body>
+</html>

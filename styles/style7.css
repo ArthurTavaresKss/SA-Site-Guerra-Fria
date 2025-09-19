@@ -1,0 +1,236 @@
+:root {
+  --red: #d62828;
+  --azul: #003049;
+  --gold: #fcbf49;
+  --black: #1c1c1c;
+  --bege: #f0e1c6;
+  --blazul: #0d1117;
+  --paper: #f0e0bf;
+  --frame: #3a2c1f;
+  --edge: #241b13;
+}
+.selector {
+  display: flex;
+  flex-direction: column !important;
+  margin-top: 15%;
+}
+.selector h4 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 100;
+}
+.selector button {
+  border: 2px solid #fff;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-shadow: rgba(3, 3, 3, 0.24) 0px 3px 8px;
+}
+.selector button:hover {
+  border: 2.5px solid var(--gold);
+  background: linear-gradient(rgba(92, 82, 33, 0.475), rgba(92, 58, 33, 0.375)),
+    transparent;
+  color: var(--gold);
+  cursor: pointer;
+  box-shadow: rgba(255, 208, 1, 0.35) 0px 5px 15px;
+  font-weight: 700;
+}
+.selector button.ligado{
+    border: 3px solid var(--gold);
+  background: linear-gradient(rgba(92, 82, 33, 0.475), rgba(92, 58, 33, 0.375)),
+    transparent;
+  color: var(--gold);
+  cursor: pointer;
+  box-shadow: rgba(255, 208, 1, 0.35) 0px 5px 15px;
+  font-weight: 700;
+}
+.primeiradecada {
+  min-height: 80vh;
+  background: linear-gradient(rgba(92, 58, 33, 0.475), rgba(92, 58, 33, 0.375)),
+    url("/imgs/backgandhi.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
+  position: relative;
+  box-shadow: rgba(46, 42, 24, 0.852) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.538) 0px 18px 36px -18px inset;
+}
+.primeiradecada > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.primeiradecada img {
+  width: 30%;
+  margin-top: 4.1%;
+}
+.titledecada span {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 12rem;
+  color: #fff;
+  line-height: 80%;
+  text-shadow: rgba(3, 3, 3, 0.24) 0px 3px 8px;
+  font-weight: 900;
+}
+.titledecada {
+  font-family: "League Gothic", sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  text-align: end;
+  text-shadow: rgba(3, 3, 3, 0.24) 0px 3px 8px;
+  font-weight: 100;
+}
+.pd {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  text-align: end;
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff;
+  text-shadow: rgba(3, 3, 3, 0.24) 0px 3px 8px;
+}
+.pdli {
+  display: grid !important;
+  grid-template-columns: 5rem 5rem 5rem;
+  gap: 5%;
+  margin-top: 5%;
+}
+.pdli p {
+  font-size: 2rem;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+.pdli span {
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 0.5px solid #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+.pdi {
+  display: flex;
+  align-items: end;
+}
+.pdlo {
+  display: flex;
+  flex-direction: column !important;
+}
+.pdli p::after {
+  content: attr(data-info);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 6px 8px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.pdli p:hover::after {
+  opacity: 1;
+}
+.pdli span::after {
+  content: attr(data-info);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 6px 8px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 5000;
+}
+.pdli span:hover::after {
+  opacity: 1;
+}
+.pdli p:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.pdli span:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.quartadecada {
+  min-height: 80vh;
+  background: linear-gradient(rgba(0, 128, 128, 0.45), rgba(255, 111, 0, 0.35)),
+    url("/imgs/backnelson.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top: 3px solid #2e8b57;
+  border-bottom: 3px solid #2e8b57;
+  position: relative;
+  box-shadow: rgba(46, 42, 24, 0.852) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.538) 0px 18px 36px -18px inset;
+}
+.quartadecada > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.quartadecada img {
+  width: 40%;
+  margin-top: 7%;
+}
+.selectorqd {
+  display: flex;
+  flex-direction: column !important;
+  margin-top: 25%;
+}
+.selectorqd h4 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 100;
+}
+.selectorqd button {
+  border: 2px solid #fff;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-shadow: rgba(3, 3, 3, 0.24) 0px 3px 8px;
+}
+.selectorqd button:hover {
+  border: 2.5px solid #2e8b57;
+  background:linear-gradient(rgba(0, 128, 128, 0.45), rgba(255, 111, 0, 0.35)),
+    transparent;
+  color: #24b864;
+  cursor: pointer;
+  box-shadow: rgba(1, 255, 111, 0.35) 0px 5px 15px;
+  font-weight: 700;
+}
+.selectorqd button.ligado{
+    border: 3px solid #2e8b57;
+  background:linear-gradient(rgba(0, 128, 128, 0.45), rgba(255, 111, 0, 0.35)),
+    transparent;
+  color: #24b864;
+  cursor: pointer;
+  box-shadow: rgba(1, 255, 111, 0.35) 0px 5px 15px;
+  font-weight: 700;
+}

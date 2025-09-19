@@ -1,0 +1,310 @@
+:root {
+  --red: #d62828;
+  --azul: #003049;
+  --gold: #fcbf49;
+  --black: #1c1c1c;
+  --bege: #f0e1c6;
+  --blazul: #0d1117;
+  --paper: #f0e0bf;
+  --frame: #3a2c1f;
+  --edge: #241b13;
+}
+.fundo {
+  background: linear-gradient(rgba(0, 0, 0, 0.268), rgba(0, 0, 0, 0.313)),
+    url("/imgs/corridaespa.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  border-top: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
+  box-shadow: rgba(0, 0, 0, 0.725) 0px 25px 20px -20px;
+  z-index: 10;
+}
+.tituloespacial {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.titleespa {
+  font-size: 56px;
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--gold);
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 60px auto 0 auto;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  padding-bottom: 10px;
+  border-bottom: 4px solid var(--gold);
+  display: inline-block;
+}
+.subespa {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Russo One", sans-serif;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+@keyframes aparecer {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.poster img {
+  width: 300px;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgb(0, 0, 0), 0 0 10px rgba(5, 5, 0, 0.478);
+  width: 18vw;
+  max-width: 300px;
+  min-width: 180px;
+  cursor: grab;
+}
+.poster img:active{
+  cursor: grabbing;
+}
+.carrossel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+.posteres {
+  display: inline-block;
+  animation: slide 25s linear infinite;
+  margin-top: 100px;
+}
+.poster {
+  display: inline-block;
+  margin: 0 30px 50px 30px;
+  font-size: 2rem;
+  color: white;
+  transition: all 0.3s ease;
+  margin: 0 2vw 50px 2vw;
+}
+.poster:hover {
+  box-shadow: 0 0 25px 5px rgba(255, 201, 100, 0.679);
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+#btnmundobi {
+  width: 200px;
+  height: 40px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--bege);
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: "Bebas Neue", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border: 3px solid var(--red);
+  letter-spacing: 4px;
+}
+#btnmundobi:hover {
+  background: var(--red);
+  transform: scale(1.05);
+  border: none;
+  box-shadow: 0 0 25px 5px rgba(255, 2, 2, 0.248);
+}
+.btnbipolar {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 40px;
+}
+.btnsarmamentistas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.btnarmamen {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 60px;
+}
+.btnespacial {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+#btnespac {
+  width: 200px;
+  height: 40px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--bege);
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: "Bebas Neue", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.571) 0px 14px 28px,
+    rgba(0, 0, 0, 0.575) 0px 10px 10px;
+  border: 3px solid var(--gold);
+  letter-spacing: 4px;
+}
+#btnespac:hover {
+  background: var(--gold);
+  transform: scale(1.09);
+  border: none;
+  color: #fff;
+  box-shadow: 0 0 25px 5px rgba(255, 201, 100, 0.248);
+}
+.saiba {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(40px) scale(1);
+}
+.saiba.apareceu {
+  animation: up 1s ease forwards;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.pageum {
+  background: var(--bege);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.pageum.ativo {
+  opacity: 1;
+  pointer-events: auto;
+}
+.pageu h2 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: var(--red);
+  text-align: center;
+  padding-top: 70px;
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+}
+.pageu h3 {
+  text-align: center;
+  color: var(--azul);
+  font-size: 1.9rem;
+  font-family: "Oswald", sans-serif;
+}
+.pageum img {
+  width: 1000px;
+}
+.pageu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.pageu::after {
+  content: "";
+  background: var(--azul);
+  width: 20%;
+  height: 60%;
+  position: absolute;
+  left: 18%;
+  top: 35%;
+  z-index: -1;
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px,
+    rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
+    rgba(42, 51, 70, 0.04) 0px 2px 2px -1px,
+    rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+    rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px,
+    rgba(42, 51, 70, 0.03) 0px 10px 10px -5px,
+    rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+}
+.pageu::before {
+  content: "";
+  background: var(--red);
+  width: 30%;
+  height: 64.5%;
+  position: absolute;
+  left: 50%;
+  top: 34%;
+  z-index: -1;
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px,
+    rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
+    rgba(42, 51, 70, 0.04) 0px 2px 2px -1px,
+    rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+    rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px,
+    rgba(42, 51, 70, 0.03) 0px 10px 10px -5px,
+    rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+}
+.overlay {
+  position: absolute;
+  top: 43%;
+  left: 62%;
+  width: 15%;
+  height: 10%;
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  color: var(--bege);
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+}
+.btnpageum {
+  width: 150px;
+  height: 30px;
+  margin-top: 10px;
+  background: transparent;
+  border: 2px solid var(--bege);
+  color: var(--bege);
+  font-size: 1.2rem;
+  position: relative;
+}
+.btnpageum:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  cursor: pointer;
+  transform: scale(1.02);
+  background: #c70b0b;
+}
+.espionagem {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+.btntv {
+  width: 200px;
+  height: 40px;
+  margin-top: 40px;
+  background: transparent;
+  border: 2px solid var(--bege);
+  color: var(--bege);
+  font-size: 1.2rem;
+}
+.btntv:hover {
+  box-shadow: rgba(0, 0, 0, 0.599) 0px 22px 70px 4px;
+  cursor: pointer;
+  transform: scale(1.03);
+  background: var(--paper);
+  color: var(--edge);
+  font-weight: 700;
+}

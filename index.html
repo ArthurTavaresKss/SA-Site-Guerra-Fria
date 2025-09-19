@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="imgs/icon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Gothic&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style2.css" />
+    <link rel="stylesheet" href="styles/style3.css" />
+    <link rel="stylesheet" href="styles/style4.css" />
+    <link rel="stylesheet" href="styles/style5.css" />
+    <link rel="stylesheet" href="styles/style6.css" />
+    <link rel="stylesheet" href="styles/style7.css" />
+    <link rel="stylesheet" href="styles/style8.css" />
+    <link rel="stylesheet" href="styles/style9.css" />
+    <title>Guerra Fria</title>
+  </head>
+  <body>
+    <header>
+      <section>
+        <img id="logo" src="imgs/logofrialogo.png" alt="Logo" />
+      </section>
+    </header>
+    <button id="menu-btn">
+      <img id="icon" src="imgs/Menufria.png" alt="Menu" />
+    </button>
+    <nav id="side-menu">
+      <a href="#home">Home</a>
+      <a href="#mundobi">O Mundo Bipolar</a>
+      <a href="#cortina">Cortina de Ferro</a>
+      <a href="#corridaarma">Corrida Armamentista</a>
+      <a href="#conflito">Conflitos Indiretos</a>
+      <a href="#corridaespacial">Corrida Espacial</a>
+      <a href="#espionagem">Espionagem</a>
+      <a href="#descolonizacao">Descolonização</a>
+      <a href="#fimdaguerra">Fim da Guerra Fria</a>
+    </nav>
+    <main>
+      <div class="home" id="home">
+        <div class="texthome">
+          <h1 id="title">GUERRA FRIA</h1>
+          <h3 id="subtitle">O MUNDO BIPOLAR</h3>
+          <button class="btn" onclick="irconteudo()">
+            EXPLORAR A HISTÓRIA
+          </button>
+        </div>
+        <div class="sets">
+          <img
+            class="flecha"
+            src="imgs/iconarrow.png"
+            onclick="irconteudo()"
+            alt="Conteúdo"
+          />
+        </div>
+      </div>
+      <div class="conteudo" id="conteudo">
+        <div class="mundobi" id="mundobi">
+          <h2 class="bipolartext">O Mundo <span>Bipolar</span></h2>
+          <div class="timeline" id="anos">
+            <div>
+              <button class="timelineselect" data-ano="1945">1945</button>
+            </div>
+            <div>
+              <button class="timelineselect" data-ano="1949">1949</button>
+            </div>
+            <div>
+              <button class="timelineselect" data-ano="1955">1955</button>
+            </div>
+            <div>
+              <button class="timelineselect" data-ano="1962">1962</button>
+            </div>
+            <div>
+              <button class="timelineselect" data-ano="1979">1979</button>
+            </div>
+            <div>
+              <button class="timelineselect" data-ano="1989">1989</button>
+            </div>
+            <div>
+              <button class="timelineselect" data-ano="1991">1991</button>
+            </div>
+          </div>
+          <div class="tabelas">
+            <div class="tabela" id="ano1945">
+              <div class="painel">
+                <div class="blocoeua">
+                  <div class="cabecalho">Bloco EUA / OTAN</div>
+                  <div class="li">
+                    <p>7 Países</p>
+                    <p
+                      data-info="Principal potência capitalista e líder do bloco ocidental"
+                    >
+                      <span class="fi fi-us"></span> Estados Unidos
+                    </p>
+                    <p
+                      data-info="Aliado histórico dos EUA e potência colonial em declínio"
+                    >
+                      <span class="fi fi-gb"></span> Reino Unido
+                    </p>
+                    <p
+                      data-info="Reconstruiu-se após a guerra com apoio do Plano Marshall"
+                    >
+                      <span class="fi fi-fr"></span> França
+                    </p>
+                    <p
+                      data-info="Parceiro estratégico dos EUA na América do Norte"
+                    >
+                      <span class="fi fi-ca"></span> Canadá
+                    </p>
+                    <p data-info="Aliada dos EUA no Pacífico">
+                      <span class="fi fi-au"></span> Austrália
+                    </p>
+                    <p data-info="Parceira ocidental no Pacífico Sul">
+                      <span class="fi fi-nz"></span> Nova Zelândia
+                    </p>
+                    <p data-info="Reconstrução pós-guerra apoiada pelos EUA">
+                      <span class="fi fi-cn"></span> China (Kuomintang)
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bloconeutro">
+                  <div class="cabecalho">Bloco Neutro</div>
+                  <div class="li">
+                    <p>5 Países</p>
+                    <p
+                      data-info="Neutro, mas com forte influência econômica e política dos EUA"
+                    >
+                      <span class="fi fi-br"></span> Brasil
+                    </p>
+                    <p
+                      data-info="Adotou neutralidade oficial durante a Guerra Mundial e permaneceu neutra"
+                    >
+                      <span class="fi fi-se"></span> Suécia
+                    </p>
+                    <p
+                      data-info="Tradição de neutralidade mantida durante a Guerra Fria"
+                    >
+                      <span class="fi fi-ch"></span> Suíça
+                    </p>
+                    <p
+                      data-info="Neutra, mas governada por Franco e anticomunista"
+                    >
+                      <span class="fi fi-es"></span> Espanha
+                    </p>
+                    <p
+                      data-info="Manteve neutralidade mesmo próxima ao Reino Unido"
+                    >
+                      <span class="fi fi-ie"></span> Irlanda
+                    </p>
+                  </div>
+                </div>
+
+                <div class="blocourss">
+                  <div class="cabecalho">Bloco URSS</div>
+                  <div class="li">
+                    <p>9 Países</p>
+                    <p
+                      data-info="Principal potência comunista e líder do bloco oriental"
+                    >
+                      <span class="fi fi-ru"></span> União Soviética
+                    </p>
+                    <p
+                      data-info="Governada por regime comunista sob influência soviética"
+                    >
+                      <span class="fi fi-pl"></span> Polônia
+                    </p>
+                    <p data-info="Comunista após a guerra, alinhada à URSS">
+                      <span class="fi fi-cz"></span> Tchecoslováquia
+                    </p>
+                    <p data-info="Controlada pela URSS após 1945">
+                      <span class="fi fi-hu"></span> Hungria
+                    </p>
+                    <p data-info="Satélite da URSS no Leste Europeu">
+                      <span class="fi fi-ro"></span> Romênia
+                    </p>
+                    <p data-info="Totalmente alinhada à União Soviética">
+                      <span class="fi fi-bg"></span> Bulgária
+                    </p>
+                    <p
+                      data-info="Parte oriental ocupada por soviéticos após 1945"
+                    >
+                      <span class="fi fi-de"></span> Alemanha Oriental
+                    </p>
+                    <p
+                      data-info="Ainda não completamente aliada, mas regime comunista em formação"
+                    >
+                      <span class="fi fi-cn"></span> China (Comunistas ainda em
+                      guerra civil)
+                    </p>
+                    <p data-info="Regime comunista, ainda independente da URSS">
+                      <span class="fi fi-yu"></span> Iugoslávia
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="legenda">
+                <div class="box">
+                  <p>
+                    <span>☢ EUA:</span> 2 ogivas <br />(Hiroshima e Nagasaki,
+                    1945)<br />
+                    <span>PIB EUA:</span> 50% do PIB mundial <br />(auge da
+                    hegemonia)<br />
+                  </p>
+                </div>
+                <div class="box">
+                  <p>
+                    <strong>☢ URSS:</strong> 0 ogivas <br />(iniciando programa
+                    nuclear)<br />
+                    <strong>PIB URSS:</strong> 20% do PIB mundial<br />
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tabela" id="ano1949">
+              <div class="painel">
+                <div class="blocoeua">
+                  <div class="cabecalho">Bloco EUA / OTAN</div>
+                  <div class="li">
+                    <p>12 Países</p>
+                    <p
+                      data-info="Principal potência capitalista e líder do bloco ocidental"
+                    >
+                      <span class="fi fi-us"></span> Estados Unidos
+                    </p>
+                    <p
+                      data-info="Aliado histórico dos EUA e potência colonial em declínio"
+                    >
+                      <span class="fi fi-gb"></span> Reino Unido
+                    </p>
+                    <p
+                      data-info="Reconstruiu-se após a guerra com apoio do Plano Marshall"
+                    >
+                      <span class="fi fi-fr"></span> França
+                    </p>
+                    <p
+                      data-info="Parceiro estratégico dos EUA na América do Norte"
+                    >
+                      <span class="fi fi-ca"></span> Canadá
+                    </p>
+                    <p
+                      data-info="Reconstruída com apoio ocidental, tornou-se símbolo da Guerra Fria"
+                    >
+                      <span class="fi fi-de"></span> Alemanha Ocidental
+                    </p>
+                    <p
+                      data-info="Aliado ocidental e importante parceiro econômico"
+                    >
+                      <span class="fi fi-it"></span> Itália
+                    </p>
+                    <p
+                      data-info="Apoiou o bloco ocidental e entrou cedo na OTAN"
+                    >
+                      <span class="fi fi-pt"></span> Portugal
+                    </p>
+                    <p data-info="Sede da OTAN e centro político europeu">
+                      <span class="fi fi-be"></span> Bélgica
+                    </p>
+                    <p
+                      data-info="Aliado ocidental e importante parceiro econômico"
+                    >
+                      <span class="fi fi-nl"></span> Países Baixos
+                    </p>
+                    <p data-info="Aliado escandinavo próximo aos EUA">
+                      <span class="fi fi-no"></span> Noruega
+                    </p>
+                    <p data-info="Alinhada ao bloco ocidental após a guerra">
+                      <span class="fi fi-dk"></span> Dinamarca
+                    </p>
+                    <p
+                      data-info="Aliado estratégico no Mediterrâneo e membro OTAN"
+                    >
+                      <span class="fi fi-gr"></span> Grécia
+                    </p>
+                    <p
+                      data-info="Aliado estratégico no Mediterrâneo e membro OTAN"
+                    >
+                      <span class="fi fi-tr"></span> Turquia
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bloconeutro">
+                  <div class="cabecalho">Bloco Neutro</div>
+                  <div class="li">
+                    <p>6 Países</p>
+                    <p
+                      data-info="Neutro, mas com forte influência econômica e política dos EUA"
+                    >
+                      <span class="fi fi-br"></span> Brasil
+                    </p>
+                    <p
+                      data-info="Adotou neutralidade oficial durante a Guerra Fria"
+                    >
+                      <span class="fi fi-se"></span> Suécia
+                    </p>
+                    <p
+                      data-info="Tradição de neutralidade mantida na Guerra Fria"
+                    >
+                      <span class="fi fi-ch"></span> Suíça
+                    </p>
+                    <p
+                      data-info="Manteve neutralidade mesmo sendo próxima ao Reino Unido"
+                    >
+                      <span class="fi fi-ie"></span> Irlanda
+                    </p>
+                    <p
+                      data-info="Neutra, mas sob influência econômica ocidental"
+                    >
+                      <span class="fi fi-fi"></span> Finlândia
+                    </p>
+                    <p
+                      data-info="Neutralidade após ocupação aliada, reintegra-se politicamente"
+                    >
+                      <span class="fi fi-at"></span> Áustria
+                    </p>
+                  </div>
+                </div>
+
+                <div class="blocourss">
+                  <div class="cabecalho">Bloco URSS</div>
+                  <div class="li">
+                    <p>8 Países</p>
+                    <p
+                      data-info="Principal potência comunista e líder do bloco oriental"
+                    >
+                      <span class="fi fi-ru"></span> União Soviética
+                    </p>
+                    <p
+                      data-info="Governada por regime comunista sob influência soviética"
+                    >
+                      <span class="fi fi-pl"></span> Polônia
+                    </p>
+                    <p data-info="Comunista após a guerra, alinhada à URSS">
+                      <span class="fi fi-cz"></span> Tchecoslováquia
+                    </p>
+                    <p data-info="Controlada pela URSS após 1945">
+                      <span class="fi fi-hu"></span> Hungria
+                    </p>
+                    <p data-info="Satélite da URSS no Leste Europeu">
+                      <span class="fi fi-ro"></span> Romênia
+                    </p>
+                    <p data-info="Totalmente alinhada à União Soviética">
+                      <span class="fi fi-bg"></span> Bulgária
+                    </p>
+                    <p
+                      data-info="Parte oriental ocupada pelos soviéticos após 1945"
+                    >
+                      <span class="fi fi-de"></span> Alemanha Oriental
+                    </p>
+                    <p
+                      data-info="Regime comunista, mas independente em relação à URSS"
+                    >
+                      <span class="fi fi-yu"></span> Iugoslávia
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="legenda">
+                <div class="box">
+                  <p>
+                    <span>☢ EUA: </span>350 ogivas<br />
+                    <span>PIB EUA:</span> 45% do PIB mundial<br />
+                  </p>
+                </div>
+                <div class="box">
+                  <p>
+                    <strong>☢ URSS:</strong> 5 ogivas<br />
+                    <strong>PIB URSS:</strong> 9% do PIB mundial<br />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tabela" id="ano1955">
+            <div class="painel">
+              <div class="blocoeua">
+                <div class="cabecalho">Bloco EUA / OTAN</div>
+                <div class="li">
+                  <p>15 Países</p>
+                  <p
+                    data-info="Principal potência capitalista e líder do bloco ocidental"
+                  >
+                    <span class="fi fi-us"></span> Estados Unidos
+                  </p>
+                  <p
+                    data-info="Aliado histórico dos EUA e potência colonial em declínio"
+                  >
+                    <span class="fi fi-gb"></span> Reino Unido
+                  </p>
+                  <p
+                    data-info="Reconstruiu-se após a guerra com apoio do Plano Marshall"
+                  >
+                    <span class="fi fi-fr"></span> França
+                  </p>
+                  <p
+                    data-info="Parceiro estratégico dos EUA na América do Norte"
+                  >
+                    <span class="fi fi-ca"></span> Canadá
+                  </p>
+                  <p
+                    data-info="Reconstruída com apoio ocidental, símbolo da Guerra Fria"
+                  >
+                    <span class="fi fi-de"></span> Alemanha Ocidental
+                  </p>
+                  <p
+                    data-info="Aliado ocidental e importante parceiro econômico"
+                  >
+                    <span class="fi fi-it"></span> Itália
+                  </p>
+                  <p data-info="Apoiou o bloco ocidental e entrou cedo na OTAN">
+                    <span class="fi fi-pt"></span> Portugal
+                  </p>
+                  <p data-info="Sede da OTAN e centro político europeu">
+                    <span class="fi fi-be"></span> Bélgica
+                  </p>
+                  <p
+                    data-info="Aliado ocidental e importante parceiro econômico"
+                  >
+                    <span class="fi fi-nl"></span> Países Baixos
+                  </p>
+                  <p data-info="Aliado escandinavo próximo aos EUA">
+                    <span class="fi fi-no"></span> Noruega
+                  </p>
+                  <p data-info="Alinhada ao bloco ocidental após a guerra">
+                    <span class="fi fi-dk"></span> Dinamarca
+                  </p>
+                  <p
+                    data-info="Aliado estratégico no Mediterrâneo e membro OTAN"
+                  >
+                    <span class="fi fi-gr"></span> Grécia
+                  </p>
+                  <p
+                    data-info="Aliado estratégico no Mediterrâneo e membro OTAN"
+                  >
+                    <span class="fi fi-tr"></span> Turquia
+                  </p>
+                  <p
+                    data-info="País do Atlântico Norte, membro OTAN desde a fundação"
+                  >
+                    <span class="fi fi-is"></span> Islândia
+                  </p>
+                  <p data-info="Parceiro estratégico no leste asiático">
+                    <span class="fi fi-jp"></span> Japão
+                  </p>
+                </div>
+              </div>
+
+              <div class="bloconeutro">
+                <div class="cabecalho">Bloco Neutro</div>
+                <div class="li">
+                  <p>6 Países</p>
+                  <p
+                    data-info="Neutro, mas com forte influência econômica e política dos EUA"
+                  >
+                    <span class="fi fi-br"></span> Brasil
+                  </p>
+                  <p
+                    data-info="Adotou neutralidade oficial durante a Guerra Fria"
+                  >
+                    <span class="fi fi-se"></span> Suécia
+                  </p>
+                  <p
+                    data-info="Tradição de neutralidade mantida na Guerra Fria"
+                  >
+                    <span class="fi fi-ch"></span> Suíça
+                  </p>
+                  <p
+                    data-info="Manteve neutralidade mesmo sendo próxima ao Reino Unido"
+                  >
+                    <span class="fi fi-ie"></span> Irlanda
+                  </p>
+                  <p data-info="Neutra, mas sob influência econômica ocidental">
+                    <span class="fi fi-fi"></span> Finlândia
+                  </p>
+                  <p
+                    data-info="Neutralidade após ocupação aliada, reintegra-se politicamente"
+                  >
+                    <span class="fi fi-at"></span> Áustria
+                  </p>
+                </div>
+              </div>
+
+              <div class="blocourss">
+                <div class="cabecalho">Bloco URSS / Pacto de Varsóvia</div>
+                <div class="li">
+                  <p>9 Países</p>
+                  <p
+                    data-info="Principal potência comunista e líder do bloco oriental"
+                  >
+                    <span class="fi fi-ru"></span> União Soviética
+                  </p>
+                  <p
+                    data-info="Governada por regime comunista sob influência soviética"
+                  >
+                    <span class="fi fi-pl"></span> Polônia
+                  </p>
+                  <p data-info="Comunista, alinhada à URSS">
+                    <span class="fi fi-cz"></span> Tchecoslováquia
+                  </p>
+                  <p data-info="Controlada pela URSS">
+                    <span class="fi fi-hu"></span> Hungria
+                  </p>
+                  <p data-info="Satélite da URSS no Leste Europeu">
+                    <span class="fi fi-ro"></span> Romênia
+                  </p>
+                  <p data-info="Totalmente alinhada à União Soviética">
+                    <span class="fi fi-bg"></span> Bulgária
+                  </p>
+                  <p data-info="Parte oriental ocupada pelos soviéticos">
+                    <span class="fi fi-de"></span> Alemanha Oriental
+                  </p>
+                  <p
+                    data-info="Aliada comunista mas independente em relação à URSS"
+                  >
+                    <span class="fi fi-yu"></span> Iugoslávia
+                  </p>
+                  <p data-info="Regime comunista, alinhada à URSS inicialmente">
+                    <span class="fi fi-al"></span> Albânia
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="legenda">
+              <div class="box">
+                <p>
+                  <span>☢ EUA: </span>2.400 ogivas<br />
+                  <span>PIB EUA:</span> 40% do PIB mundial<br />
+                </p>
+              </div>
+              <div class="box">
+                <p>
+                  <strong>☢ URSS:</strong> 200 ogivas<br />
+                  <strong>PIB URSS:</strong> 12% do PIB mundial<br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tabela" id="ano1962">
+            <div class="painel">
+              <div class="blocoeua">
+                <div class="cabecalho">Bloco EUA / OTAN</div>
+                <div class="li">
+                  <p>15 Países</p>
+                  <p
+                    data-info="Principal potência capitalista e líder do bloco ocidental"
+                  >
+                    <span class="fi fi-us"></span> Estados Unidos
+                  </p>
+                  <p
+                    data-info="Aliado histórico dos EUA e potência colonial em declínio"
+                  >
+                    <span class="fi fi-gb"></span> Reino Unido
+                  </p>
+                  <p
+                    data-info="Reconstruiu-se após a guerra com apoio do Plano Marshall"
+                  >
+                    <span class="fi fi-fr"></span> França
+                  </p>
+                  <p
+                    data-info="Parceiro estratégico dos EUA na América do Norte"
+                  >
+                    <span class="fi fi-ca"></span> Canadá
+                  </p>
+                  <p
+                    data-info="Reconstruída com apoio ocidental, símbolo da Guerra Fria"
+                  >
+                    <span class="fi fi-de"></span> Alemanha Ocidental
+                  </p>
+                  <p
+                    data-info="Aliado ocidental e importante parceiro econômico"
+                  >
+                    <span class="fi fi-it"></span> Itália
+                  </p>
+                  <p data-info="Apoiou o bloco ocidental e entrou cedo na OTAN">
+                    <span class="fi fi-pt"></span> Portugal
+                  </p>
+                  <p data-info="Sede da OTAN e centro político europeu">
+                    <span class="fi fi-be"></span> Bélgica
+                  </p>
+                  <p
+                    data-info="Aliado ocidental e importante parceiro econômico"
+                  >
+                    <span class="fi fi-nl"></span> Países Baixos
+                  </p>
+                  <p data-info="Aliado escandinavo próximo aos EUA">
+                    <span class="fi fi-no"></span> Noruega
+                  </p>
+                  <p data-info="Alinhada ao bloco ocidental após a guerra">
+                    <span class="fi fi-dk"></span> Dinamarca
+                  </p>
+                  <p
+                    data-info="Aliado estratégico no Mediterrâneo e membro OTAN"
+                  >
+                    <span class="fi fi-gr"></span> Grécia
+                  </p>
+                  <p
+                    data-info="Aliado estratégico no Mediterrâneo e membro OTAN"
+                  >
+                    <span class="fi fi-tr"></span> Turquia
+                  </p>
+                  <p
+                    data-info="País do Atlântico Norte, membro OTAN desde a fundação"
+                  >
+                    <span class="fi fi-is"></span> Islândia
+                  </p>
+                  <p
+                    data-info="Aliado estratégico no leste asiático após a Guerra da Coreia"
+                  >
+                    <span class="fi fi-kr"></span> Coreia do Sul
+                  </p>
+                </div>
+              </div>
+
+              <div class="bloconeutro">
+                <div class="cabecalho">Bloco Neutro / Não-Alinhados</div>
+                <div class="li">
+                  <p>7 Países</p>
+                  <p
+                    data-info="Neutro, mas com forte influência econômica e política dos EUA"
+                  >
+                    <span class="fi fi-br"></span> Brasil
+                  </p>
+                  <p
+                    data-info="Adotou neutralidade oficial durante a Guerra Fria"
+                  >
+                    <span class="fi fi-se"></span> Suécia
+                  </p>
+                  <p
+                    data-info="Tradição de neutralidade mantida na Guerra Fria"
+                  >
+                    <span class="fi fi-ch"></span> Suíça
+                  </p>
+                  <p
+                    data-info="Manteve neutralidade mesmo sendo próxima ao Reino Unido"
+                  >
+                    <span class="fi fi-ie"></span> Irlanda
+                  </p>
+                  <p data-info="Neutra, mas sob influência econômica ocidental">
+                    <span class="fi fi-fi"></span> Finlândia
+                  </p>
+                  <p
+                    data-info="Neutralidade após ocupação aliada, reintegra-se politicamente"
+                  >
+                    <span class="fi fi-at"></span> Áustria
+                  </p>
+                  <p data-info="Líder do Movimento dos Não-Alinhados">
+                    <span class="fi fi-in"></span> Índia
+                  </p>
+                </div>
+              </div>
+
+              <div class="blocourss">
+                <div class="cabecalho">Bloco URSS / Pacto de Varsóvia</div>
+                <div class="li">
+                  <p>10 Países</p>
+                  <p
+                    data-info="Principal potência comunista e líder do bloco oriental"
+                  >
+                    <span class="fi fi-ru"></span> União Soviética
+                  </p>
+                  <p
+                    data-info="Governada por regime comunista sob influência soviética"
+                  >
+                    <span class="fi fi-pl"></span> Polônia
+                  </p>
+                  <p data-info="Comunista, alinhada à URSS">
+                    <span class="fi fi-cz"></span> Tchecoslováquia
+                  </p>
+                  <p data-info="Controlada pela URSS">
+                    <span class="fi fi-hu"></span> Hungria
+                  </p>
+                  <p data-info="Satélite da URSS no Leste Europeu">
+                    <span class="fi fi-ro"></span> Romênia
+                  </p>
+                  <p data-info="Totalmente alinhada à União Soviética">
+                    <span class="fi fi-bg"></span> Bulgária
+                  </p>
+                  <p data-info="Parte oriental ocupada pelos soviéticos">
+                    <span class="fi fi-de"></span> Alemanha Oriental
+                  </p>
+                  <p
+                    data-info="Aliada comunista mas independente em relação à URSS"
+                  >
+                    <span class="fi fi-yu"></span> Iugoslávia
+                  </p>
+                  <p data-info="Regime comunista, alinhada à URSS inicialmente">
+                    <span class="fi fi-al"></span> Albânia
+                  </p>
+                  <p
+                    data-info="Aliada comunista sob forte influência soviética, país-chave na crise de 1962"
+                  >
+                    <span class="fi fi-cu"></span> Cuba
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="legenda">
+              <div class="box">
+                <p>
+                  <span>☢ EUA: </span>25.540 ogivas<br />
+                  <span>PIB EUA:</span> 38–40% do PIB mundial<br />
+                </p>
+              </div>
+              <div class="box">
+                <p>
+                  <strong>☢ URSS:</strong> 3.346 ogivas<br />
+                  <strong>PIB URSS:</strong> 14–15% do PIB mundial<br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tabela" id="ano1979">
+            <div class="painel">
+              <div class="blocoeua">
+                <div class="cabecalho">Bloco EUA / OTAN</div>
+                <div class="li">
+                  <p>15 Países</p>
+                  <p
+                    data-info="Principal potência capitalista e líder do bloco ocidental"
+                  >
+                    <span class="fi fi-us"></span> Estados Unidos
+                  </p>
+                  <p
+                    data-info="Aliado histórico dos EUA e potência colonial em declínio"
+                  >
+                    <span class="fi fi-gb"></span> Reino Unido
+                  </p>
+                  <p
+                    data-info="Reconstruiu-se após a guerra com apoio do Plano Marshall"
+                  >
+                    <span class="fi fi-fr"></span> França
+                  </p>
+                  <p
+                    data-info="Parceiro estratégico dos EUA na América do Norte"
+                  >
+                    <span class="fi fi-ca"></span> Canadá
+                  </p>
+                  <p
+                    data-info="Reconstruída com apoio ocidental, símbolo da Guerra Fria"
+                  >
+                    <span class="fi fi-de"></span> Alemanha Ocidental
+                  </p>
+                  <p
+                    data-info="Aliado ocidental e importante parceiro econômico"
+                  >
+                    <span class="fi fi-it"></span> Itália
+                  </p>
+                  <p data-info="Apoiou o bloco ocidental e entrou cedo na OTAN">
+                    <span class="fi fi-pt"></span> Portugal
+                  </p>
+                  <p data-info="Sede da OTAN e centro político europeu">
+                    <span class="fi fi-be"></span> Bélgica
+                  </p>
+                  <p
+                    data-info="Aliado ocidental e importante parceiro econômico"
+                  >
+                    <span class="fi fi-nl"></span> Países Baixos
+                  </p>
+                  <p data-info="Aliado escandinavo próximo aos EUA">
+                    <span class="fi fi-no"></span> Noruega
+                  </p>
+                  <p data-info="Alinhada ao bloco ocidental após a guerra">
+                    <span class="fi fi-dk"></span> Dinamarca
+                  </p>
+                  <p
+                    data-info="Aliado estratégico no Mediterrâneo e membro OTAN"
+                  >
+                    <span class="fi fi-gr"></span> Grécia
+                  </p>
+                  <p
+                    data-info="Aliado estratégico no Mediterrâneo e membro OTAN"
+                  >
+                    <span class="fi fi-tr"></span> Turquia
+                  </p>
+                  <p
+                    data-info="País do Atlântico Norte, membro OTAN desde a fundação"
+                  >
+                    <span class="fi fi-is"></span> Islândia
+                  </p>
+                  <p data-info="Aliado estratégico no leste asiático">
+                    <span class="fi fi-kr"></span> Coreia do Sul
+                  </p>
+                </div>
+              </div>
+
+              <div class="bloconeutro">
+                <div class="cabecalho">Bloco Neutro / Não-Alinhados</div>
+                <div class="li">
+                  <p>7 Países</p>
+                  <p
+                    data-info="Neutro, mas com forte influência econômica e política dos EUA"
+                  >
+                    <span class="fi fi-br"></span> Brasil
+                  </p>
+                  <p
+                    data-info="Adotou neutralidade oficial durante a Guerra Fria"
+                  >
+                    <span class="fi fi-se"></span> Suécia
+                  </p>
+                  <p
+                    data-info="Tradição de neutralidade mantida na Guerra Fria"
+                  >
+                    <span class="fi fi-ch"></span> Suíça
+                  </p>
+                  <p
+                    data-info="Manteve neutralidade mesmo sendo próxima ao Reino Unido"
+                  >
+                    <span class="fi fi-ie"></span> Irlanda
+                  </p>
+                  <p data-info="Neutra, mas sob influência econômica ocidental">
+                    <span class="fi fi-fi"></span> Finlândia
+                  </p>
+                  <p
+                    data-info="Neutralidade após ocupação aliada, reintegra-se politicamente"
+                  >
+                    <span class="fi fi-at"></span> Áustria
+                  </p>
+                  <p data-info="Líder do Movimento dos Não-Alinhados">
+                    <span class="fi fi-in"></span> Índia
+                  </p>
+                </div>
+              </div>
+
+              <div class="blocourss">
+                <div class="cabecalho">Bloco URSS / Pacto de Varsóvia</div>
+                <div class="li">
+                  <p>11 Países</p>
+                  <p
+                    data-info="Principal potência comunista e líder do bloco oriental"
+                  >
+                    <span class="fi fi-ru"></span> União Soviética
+                  </p>
+                  <p
+                    data-info="Governada por regime comunista sob influência soviética"
+                  >
+                    <span class="fi fi-pl"></span> Polônia
+                  </p>
+                  <p data-info="Comunista, alinhada à URSS">
+                    <span class="fi fi-cz"></span> Tchecoslováquia
+                  </p>
+                  <p data-info="Controlada pela URSS">
+                    <span class="fi fi-hu"></span> Hungria
+                  </p>
+                  <p data-info="Satélite da URSS no Leste Europeu">
+                    <span class="fi fi-ro"></span> Romênia
+                  </p>
+                  <p data-info="Totalmente alinhada à União Soviética">
+                    <span class="fi fi-bg"></span> Bulgária
+                  </p>
+                  <p data-info="Parte oriental ocupada pelos soviéticos">
+                    <span class="fi fi-de"></span> Alemanha Oriental
+                  </p>
+                  <p
+                    data-info="Aliada comunista mas independente em relação à URSS"
+                  >
+                    <span class="fi fi-yu"></span> Iugoslávia
+                  </p>
+                  <p data-info="Regime comunista, alinhada à URSS inicialmente">
+                    <span class="fi fi-al"></span> Albânia
+                  </p>
+                  <p
+                    data-info="Aliada comunista sob forte influência soviética, país-chave na Crise de Cuba"
+                  >
+                    <span class="fi fi-cu"></span> Cuba
+                  </p>
+                  <p
+                    data-info="Regime comunista no sul da Ásia, aliado estratégico da URSS"
+                  >
+                    <span class="fi fi-af"></span> Afeganistão
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="legenda">
+              <div class="box">
+                <p>
+                  <span>☢ EUA: </span> 24.000 ogivas<br />
+                  <span>PIB EUA:</span> 26% do PIB mundial<br />
+                </p>
+              </div>
+              <div class="box">
+                <p>
+                  <strong>☢ URSS:</strong> 35.000 ogivas<br />
+                  <strong>PIB URSS:</strong> 12% do PIB mundial<br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tabela" id="ano1989">
+            <div class="painel">
+              <div class="blocoeua">
+                <div class="cabecalho">Bloco EUA / OTAN</div>
+                <div class="li">
+                  <p>16 Países</p>
+                  <p
+                    data-info="Principal potência capitalista e líder do bloco ocidental"
+                  >
+                    <span class="fi fi-us"></span> Estados Unidos
+                  </p>
+                  <p
+                    data-info="Aliado histórico dos EUA e potência colonial em declínio"
+                  >
+                    <span class="fi fi-gb"></span> Reino Unido
+                  </p>
+                  <p
+                    data-info="Reconstruiu-se após a guerra com apoio do Plano Marshall"
+                  >
+                    <span class="fi fi-fr"></span> França
+                  </p>
+                  <p
+                    data-info="Parceiro estratégico dos EUA na América do Norte"
+                  >
+                    <span class="fi fi-ca"></span> Canadá
+                  </p>
+                  <p
+                    data-info="Reconstruída com apoio ocidental, símbolo da Guerra Fria"
+                  >
+                    <span class="fi fi-de"></span> Alemanha Ocidental
+                  </p>
+                  <p
+                    data-info="Aliado ocidental e importante parceiro econômico"
+                  >
+                    <span class="fi fi-it"></span> Itália
+                  </p>
+                  <p data-info="Apoiou o bloco ocidental e entrou cedo na OTAN">
+                    <span class="fi fi-pt"></span> Portugal
+                  </p>
+                  <p data-info="Sede da OTAN e centro político europeu">
+                    <span class="fi fi-be"></span> Bélgica
+                  </p>
+                  <p
+                    data-info="Aliado ocidental e importante parceiro econômico"
+                  >
+                    <span class="fi fi-nl"></span> Países Baixos
+                  </p>
+                  <p data-info="Aliado escandinavo próximo aos EUA">
+                    <span class="fi fi-no"></span> Noruega
+                  </p>
+                  <p data-info="Alinhada ao bloco ocidental após a guerra">
+                    <span class="fi fi-dk"></span> Dinamarca
+                  </p>
+                  <p
+                    data-info="Aliado estratégico no Mediterrâneo e membro OTAN"
+                  >
+                    <span class="fi fi-gr"></span> Grécia
+                  </p>
+                  <p
+                    data-info="Aliado estratégico no Mediterrâneo e membro OTAN"
+                  >
+                    <span class="fi fi-tr"></span> Turquia
+                  </p>
+                  <p
+                    data-info="País do Atlântico Norte, membro OTAN desde a fundação"
+                  >
+                    <span class="fi fi-is"></span> Islândia
+                  </p>
+                  <p data-info="Aliado estratégico no leste asiático">
+                    <span class="fi fi-kr"></span> Coreia do Sul
+                  </p>
+                  <p data-info="Aliado estratégico na Ásia, parceiro dos EUA">
+                    <span class="fi fi-jp"></span> Japão
+                  </p>
+                </div>
+              </div>
+
+              <div class="bloconeutro">
+                <div class="cabecalho">Bloco Neutro / Não-Alinhados</div>
+                <div class="li">
+                  <p>7 Países</p>
+                  <p
+                    data-info="Neutro, mas com forte influência econômica e política dos EUA"
+                  >
+                    <span class="fi fi-br"></span> Brasil
+                  </p>
+                  <p
+                    data-info="Adotou neutralidade oficial durante a Guerra Fria"
+                  >
+                    <span class="fi fi-se"></span> Suécia
+                  </p>
+                  <p
+                    data-info="Tradição de neutralidade mantida na Guerra Fria"
+                  >
+                    <span class="fi fi-ch"></span> Suíça
+                  </p>
+                  <p
+                    data-info="Manteve neutralidade mesmo sendo próxima ao Reino Unido"
+                  >
+                    <span class="fi fi-ie"></span> Irlanda
+                  </p>
+                  <p data-info="Neutra, mas sob influência econômica ocidental">
+                    <span class="fi fi-fi"></span> Finlândia
+                  </p>
+                  <p
+                    data-info="Neutralidade após ocupação aliada, reintegra-se politicamente"
+                  >
+                    <span class="fi fi-at"></span> Áustria
+                  </p>
+                  <p data-info="Líder do Movimento dos Não-Alinhados">
+                    <span class="fi fi-in"></span> Índia
+                  </p>
+                </div>
+              </div>
+
+              <div class="blocourss">
+                <div class="cabecalho">Bloco URSS / Pacto de Varsóvia</div>
+                <div class="li">
+                  <p>8 Países</p>
+                  <p
+                    data-info="Principal potência comunista e líder do bloco oriental"
+                  >
+                    <span class="fi fi-ru"></span> União Soviética
+                  </p>
+                  <p
+                    data-info="Governada por regime comunista sob influência soviética"
+                  >
+                    <span class="fi fi-pl"></span> Polônia
+                  </p>
+                  <p data-info="Comunista, alinhada à URSS">
+                    <span class="fi fi-cz"></span> Tchecoslováquia
+                  </p>
+                  <p data-info="Controlada pela URSS">
+                    <span class="fi fi-hu"></span> Hungria
+                  </p>
+                  <p data-info="Satélite da URSS no Leste Europeu">
+                    <span class="fi fi-ro"></span> Romênia
+                  </p>
+                  <p data-info="Totalmente alinhada à União Soviética">
+                    <span class="fi fi-bg"></span> Bulgária
+                  </p>
+                  <p data-info="Parte oriental ocupada pelos soviéticos">
+                    <span class="fi fi-de"></span> Alemanha Oriental
+                  </p>
+                  <p
+                    data-info="Aliada comunista mas independente em relação à URSS"
+                  >
+                    <span class="fi fi-yu"></span> Iugoslávia
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="legenda">
+              <div class="box">
+                <p>
+                  <span>☢ EUA: </span> 22.000 ogivas<br />
+                  <span>PIB EUA:</span> 25% do PIB mundial<br />
+                </p>
+              </div>
+              <div class="box">
+                <p>
+                  <strong>☢ URSS:</strong> 39.000 ogivas<br />
+                  <strong>PIB URSS:</strong> 9% do PIB mundial<br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tabela" id="ano1991">
+            <div class="painel">
+              <div class="blocoeua">
+                <div class="cabecalho">Bloco EUA / OTAN</div>
+                <div class="li">
+                  <p>16 Países</p>
+                  <p
+                    data-info="Principal potência capitalista e líder do bloco ocidental"
+                  >
+                    <span class="fi fi-us"></span> Estados Unidos
+                  </p>
+                  <p
+                    data-info="Aliado histórico dos EUA e potência colonial em declínio"
+                  >
+                    <span class="fi fi-gb"></span> Reino Unido
+                  </p>
+                  <p
+                    data-info="Reconstruiu-se após a guerra com apoio do Plano Marshall"
+                  >
+                    <span class="fi fi-fr"></span> França
+                  </p>
+                  <p
+                    data-info="Parceiro estratégico dos EUA na América do Norte"
+                  >
+                    <span class="fi fi-ca"></span> Canadá
+                  </p>
+                  <p data-info="Aliado estratégico na Europa Ocidental">
+                    <span class="fi fi-de"></span> Alemanha Ocidental
+                  </p>
+                  <p
+                    data-info="Aliado ocidental e importante parceiro econômico"
+                  >
+                    <span class="fi fi-it"></span> Itália
+                  </p>
+                  <p data-info="Apoiou o bloco ocidental e entrou cedo na OTAN">
+                    <span class="fi fi-pt"></span> Portugal
+                  </p>
+                  <p data-info="Sede da OTAN e centro político europeu">
+                    <span class="fi fi-be"></span> Bélgica
+                  </p>
+                  <p
+                    data-info="Aliado ocidental e importante parceiro econômico"
+                  >
+                    <span class="fi fi-nl"></span> Países Baixos
+                  </p>
+                  <p data-info="Aliado escandinavo próximo aos EUA">
+                    <span class="fi fi-no"></span> Noruega
+                  </p>
+                  <p data-info="Alinhada ao bloco ocidental">
+                    <span class="fi fi-dk"></span> Dinamarca
+                  </p>
+                  <p
+                    data-info="Aliado estratégico no Mediterrâneo e membro OTAN"
+                  >
+                    <span class="fi fi-gr"></span> Grécia
+                  </p>
+                  <p
+                    data-info="Aliado estratégico no Mediterrâneo e membro OTAN"
+                  >
+                    <span class="fi fi-tr"></span> Turquia
+                  </p>
+                  <p
+                    data-info="País do Atlântico Norte, membro OTAN desde a fundação"
+                  >
+                    <span class="fi fi-is"></span> Islândia
+                  </p>
+                  <p data-info="Aliado estratégico no leste asiático">
+                    <span class="fi fi-kr"></span> Coreia do Sul
+                  </p>
+                  <p data-info="Aliado estratégico na Ásia">
+                    <span class="fi fi-jp"></span> Japão
+                  </p>
+                </div>
+              </div>
+
+              <div class="bloconeutro">
+                <div class="cabecalho">Bloco Neutro / Não-Alinhados</div>
+                <div class="li">
+                  <p>7 Países</p>
+                  <p
+                    data-info="Neutro, mas com forte influência econômica e política dos EUA"
+                  >
+                    <span class="fi fi-br"></span> Brasil
+                  </p>
+                  <p
+                    data-info="Adotou neutralidade oficial durante a Guerra Fria"
+                  >
+                    <span class="fi fi-se"></span> Suécia
+                  </p>
+                  <p
+                    data-info="Tradição de neutralidade mantida na Guerra Fria"
+                  >
+                    <span class="fi fi-ch"></span> Suíça
+                  </p>
+                  <p
+                    data-info="Manteve neutralidade mesmo sendo próxima ao Reino Unido"
+                  >
+                    <span class="fi fi-ie"></span> Irlanda
+                  </p>
+                  <p data-info="Neutra, mas sob influência econômica ocidental">
+                    <span class="fi fi-fi"></span> Finlândia
+                  </p>
+                  <p
+                    data-info="Neutralidade após ocupação aliada, reintegra-se politicamente"
+                  >
+                    <span class="fi fi-at"></span> Áustria
+                  </p>
+                  <p data-info="Líder do Movimento dos Não-Alinhados">
+                    <span class="fi fi-in"></span> Índia
+                  </p>
+                </div>
+              </div>
+
+              <div class="blocourss">
+                <div class="cabecalho">
+                  Ex-bloco URSS / Países pós-soviéticos
+                </div>
+                <div class="li">
+                  <p>0 Países</p>
+                  <p
+                    data-info="A União Soviética se dissolveu oficialmente em dezembro de 1991, encerrando o bloco oriental e a Guerra Fria. Países que antes eram satélites ou repúblicas soviéticas passaram a ser independentes e buscaram relações diplomáticas diversas."
+                  >
+                    <span class="fi fi-ru"></span> Federação Russa (sucessora da
+                    URSS)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="legenda">
+              <div class="box">
+                <p>
+                  <span>☢ EUA: </span> 21.000 ogivas<br />
+                  <span>PIB EUA:</span> 25% do PIB mundial<br />
+                </p>
+              </div>
+              <div class="box">
+                <p>
+                  <strong>☢ URSS (até 1991) / Rússia:</strong> 37.000 ogivas<br />
+                  (herdadas pela Rússia)<br />
+                  <strong>PIB URSS:</strong> 7% do PIB mundial<br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cortina" id="cortina">
+          <section class="muro">
+            <h2>Cortina de Ferro e o Muro de Berlim</h2>
+            <p>Um símbolo concreto da divisão mundial.</p>
+          </section>
+          <section class="tv-section">
+            <div class="tv-frame">
+              <div class="tv-antenna">
+                <div class="tv-antenna-base">
+                  <div class="tv-antenna-arm left"></div>
+                  <div class="tv-antenna-arm right"></div>
+                </div>
+              </div>
+              <div class="tv-screen">
+                <img
+                  id="tvImage"
+                  src="imgs/oriente.png"
+                  alt="Berlim Oriental"
+                />
+                <div class="scanlines"></div>
+                <div class="tv-hud" id="tvHud">Berlim Oriental</div>
+              </div>
+
+              <div class="tv-controls">
+                <button class="btn-power">⏻</button>
+                <button class="btn-round" onclick="trocar()">Canal</button>
+                <div class="volume-controls">
+                  <button class="btn-small">+</button>
+                  <button class="btn-small">-</button>
+                </div>
+              </div>
+            </div>
+            <div class="saiba">
+              <a href="muro.html">
+                <button class="btntv">Saiba Mais</button>
+              </a>
+            </div>
+          </section>
+        </div>
+        <section class="armamentista" id="corridaarma">
+          <br />
+          <div class="textarma">
+            <h2>Corrida Armamentista e Ameaça Nuclear</h2>
+            <p>
+              Após 1945, EUA e URSS iniciaram uma disputa para desenvolver o
+              maior arsenal nuclear do mundo. Essa corrida não visava apenas
+              poder militar, mas também hegemonia política e tecnológica.
+            </p>
+          </div>
+          <div class="barras-container">
+            <div class="barra" data-value="70" data-ogivas="31000">
+              <span class="titulo">EUA / OTAN</span>
+              <div class="progress">
+                <div class="fill eua">
+                  <span class="valor">0</span>
+                  <p>´Ogivas</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="barra" data-value="80" data-ogivas="40000">
+              <span class="titulo">URSS</span>
+              <div class="progress">
+                <div class="fill urss"><span class="valor">0</span>´Ogivas</div>
+              </div>
+            </div>
+          </div>
+          <div class="btnsarmamentistas">
+            <div class="mad">
+              <button onclick="mad()" class="btnmad">O que é MAD?</button>
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <div id="madModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>MAD – Mutual Assured Destruction</h2>
+              <p>
+                MAD (Destruição Mútua Assegurada) foi a doutrina militar durante
+                a Guerra Fria que afirmava que, se uma superpotência atacasse
+                com armas nucleares, a outra responderia com igual ou maior
+                força, levando à destruição de ambos os lados.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="conflito" id="conflito">
+          <br />
+          <br />
+          <br />
+          <h1 id="textconfli">Conflitos Indiretos</h1>
+          <div class="jornal-container">
+            <button class="arrow left">&#10094;</button>
+            <div class="jornal-wrapper">
+              <div class="jornal">
+                <h2>
+                  Guerra da Coreia<span><br />1950–1953</span>
+                </h2>
+                <img src="imgs/coreia.png" alt="Guerra da Coreia" />
+                <div class="textjornal">
+                  <h3>O primeiro campo de batalha da Guerra Fria</h3>
+                  <p>
+                    A península coreana virou palco do confronto entre comunismo
+                    e capitalismo. O Norte, apoiado pela URSS e China, enfrentou
+                    o Sul, sustentado pelos EUA e ONU. O resultado foi a divisão
+                    permanente entre Coreia do Norte e Coreia do Sul.
+                  </p>
+                  <a class="btnarmamen" href="arquivoshtml/coreia.html">
+                    <button class="btnjornal">Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+              <div class="jornal">
+                <h2>
+                  Guerra do Vietnã<span><br />1955–1975</span>
+                </h2>
+                <img src="imgs/vietna.png" alt="Guerra do Vietnã" />
+                <div class="textjornal">
+                  <h3>O fracasso americano na selva</h3>
+                  <p>
+                    O Vietnã do Norte, comunista e aliado da URSS, lutou contra
+                    o Vietnã do Sul, apoiado pelos EUA. O conflito terminou na
+                    vitória comunista e unificação do país.
+                  </p>
+                  <a class="btnarmamen" href="arquivoshtml/coreia.html">
+                    <button class="btnjornal">Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+              <div class="jornal">
+                <h2>
+                  Crise de Suez<span><br />1956</span>
+                </h2>
+                <img src="imgs/suez.png" alt="Crise de Suez" />
+                <div class="textjornal">
+                  <h3>Canal estratégico, interesses globais</h3>
+                  <p>
+                    O Egito nacionalizou o Canal de Suez, provocando intervenção
+                    militar de Reino Unido, França e Israel. A URSS apoiou o
+                    Egito, enquanto os EUA mediaram a crise. Mostrou como o
+                    Oriente Médio seria central na Guerra Fria.
+                  </p>
+                  <a class="btnarmamen" href="arquivoshtml/coreia.html">
+                    <button class="btnjornal">Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+              <div class="jornal">
+                <h2>
+                  Guerra do Afeganistão<span><br />1979–1989</span>
+                </h2>
+                <img src="imgs/Afeganistao.png" alt="Guerra do Afeganistão" />
+                <div class="textjornal">
+                  <h3>O Vietnã soviético</h3>
+                  <p>
+                    A URSS invadiu o Afeganistão para sustentar um governo
+                    aliado, mas enfrentou a resistência dos guerrilheiros
+                    mujahidin, armados e financiados pelos EUA. O conflito
+                    enfraqueceu a União Soviética e acelerou seu colapso.
+                  </p>
+                  <a class="btnarmamen" href="arquivoshtml/coreia.html">
+                    <button class="btnjornal">Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+              <div class="jornal">
+                <h2>Crise dos Mísseis <br />em Cuba<span> 1962</span></h2>
+                <img src="imgs/misseis.png" alt="Crise dos Mísseis em Cuba" />
+                <div class="textjornal">
+                  <h3>O mundo à beira da guerra nuclear</h3>
+                  <p>
+                    Após a Revolução Cubana, a URSS instalou mísseis nucleares
+                    em Cuba, a poucos quilômetros dos EUA. O impasse quase levou
+                    a um confronto direto, mas terminou em um acordo: retirada
+                    dos mísseis em troca da não invasão da ilha.
+                  </p>
+                  <a class="btnarmamen" href="arquivoshtml/coreia.html">
+                    <button class="btnjornal">Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+              <div class="jornal">
+                <h2>Guerra Civil <br />de Angola<span> 1975–2002</span></h2>
+                <img src="imgs/Angola.png" alt="Guerra Civil de Angola" />
+                <div class="textjornal">
+                  <h3>A África como tabuleiro da Guerra Fria</h3>
+                  <p>
+                    Após a independência de Portugal, Angola mergulhou em guerra
+                    civil. O MPLA recebeu apoio soviético e cubano, enquanto a
+                    UNITA contou com ajuda dos EUA e da África do Sul. O país se
+                    tornou palco de disputa entre potências.
+                  </p>
+                  <a class="btnarmamen" href="arquivoshtml/coreia.html">
+                    <button class="btnjornal">Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+              <div class="jornal">
+                <h2>
+                  Guerra da Indochina<span
+                    ><br />
+                    1946–1954</span
+                  >
+                </h2>
+                <img src="imgs/indochina.png" alt="Guerra da Indochina" />
+                <div class="textjornal">
+                  <h3>O embrião da Guerra do Vietnã</h3>
+                  <p>
+                    O Viet Minh, liderado por Ho Chi Minh e apoiado pela URSS e
+                    China, lutou contra a França pelo controle do Vietnã. A
+                    derrota francesa na Batalha de Dien Bien Phu abriu caminho
+                    para a Guerra do Vietnã.
+                  </p>
+                  <a class="btnarmamen" href="arquivoshtml/coreia.html">
+                    <button class="btnjornal">Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+              <div class="jornal">
+                <h2>
+                  Guerra da Etiópia<br />
+                  x Somália<span> 1977–1978</span>
+                </h2>
+                <img src="imgs/etiopia.png" alt="Guerra da Etiópia x Somália" />
+                <div class="textjornal">
+                  <h3>O chifre da África em disputa</h3>
+                  <p>
+                    Conhecida como Guerra de Ogaden, colocou a Somália (apoiada
+                    pelos EUA) contra a Etiópia (apoiada pela URSS e Cuba). Foi
+                    mais um exemplo de como até conflitos regionais se tornavam
+                    parte da Guerra Fria.
+                  </p>
+                  <a class="btnarmamen" href="arquivoshtml/coreia.html">
+                    <button class="btnjornal">Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+              <div class="jornal">
+                <h2>
+                  Revolução Cubana<span
+                    ><br />
+                    1953–1959</span
+                  >
+                </h2>
+                <img src="imgs/cubana.png" alt="Revolução Cubana" />
+                <div class="textjornal">
+                  <h3>O comunismo chega ao quintal dos EUA</h3>
+                  <p>
+                    Liderada por Fidel Castro e Che Guevara, a revolução
+                    derrubou a ditadura de Fulgêncio Batista. Com apoio da URSS,
+                    Cuba se tornou o principal aliado comunista na América,
+                    mudando o equilíbrio estratégico no continente.
+                  </p>
+                  <a class="btnarmamen" href="arquivoshtml/coreia.html">
+                    <button class="btnjornal">Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <button class="arrow right">&#10095;</button>
+          </div>
+        </section>
+        <section class="espacial" id="corridaespacial">
+          <div class="fundo">
+            <div class="tituloespacial">
+              <h2 class="titleespa">CORRIDA ESPACIAL</h2>
+              <br />
+              <h3 class="subespa">
+                EUA vs URSS em busca das estrelas (1957-1975)
+              </h3>
+            </div>
+            <div class="carrossel">
+              <div class="posteres">
+                <div class="poster">
+                  <img src="imgs/sputnik.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img src="imgs/laika.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img src="imgs/gagarin.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img
+                    src="imgs/tereshkova.png"
+                    alt="Pôster Corrida Espacial"
+                  />
+                </div>
+                <div class="poster">
+                  <img src="imgs/apollo11.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img src="imgs/seuz.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img src="imgs/oni.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img src="imgs/mnp.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img src="imgs/esta.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img src="imgs/sputnik.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img src="imgs/laika.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img src="imgs/gagarin.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img
+                    src="imgs/tereshkova.png"
+                    alt="Pôster Corrida Espacial"
+                  />
+                </div>
+                <div class="poster">
+                  <img src="imgs/apollo11.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img src="imgs/seuz.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img src="imgs/oni.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img src="imgs/mnp.png" alt="Pôster Corrida Espacial" />
+                </div>
+                <div class="poster">
+                  <img src="imgs/esta.png" alt="Pôster Corrida Espacial" />
+                </div>
+              </div>
+            </div>
+            <div class="saiba">
+              <a class="btnespacial" href="corridaarmamentista.html">
+                <button id="btnespac">Saiba Mais</button>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="espionagem" id="espionagem">
+          <div class="pageum ativo" data-page="1">
+            <div class="pageu">
+              <div>
+                <h2>ESPIONAGEM & <br />CONTRAESPIONAGEM</h2>
+                <h3>
+                  Na Guerra Fria, a espionagem foi uma arma tão poderosa quanto
+                  bombas.
+                </h3>
+              </div>
+              <img src="imgs/pageum.png" alt="Capa" />
+              <div class="overlay">
+                <p>
+                  Segredos e traições da Guerra Fria moldaram o mundo.
+                  <b>Clique e descubra.</b>
+                </p>
+                <div>
+                  <a href="jornalum.html">
+                    <button class="btnpageum">Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pageum" data-page="2">
+            <div class="paged">
+              <div class="containerpaged">
+                <h2>CORRIDA DE ESPIÕES</h2>
+                <h3>
+                  MI6, CIA e KGB disputaram cada segredo como se fosse uma bomba
+                  nuclear.
+                </h3>
+                <img src="imgs/imagempasta.png" alt="Pasta" />
+                <div class="textpaged">
+                  <p>
+                    MI6 e KGB travaram uma guerra silenciosa, tão estratégica
+                    quanto a corrida armamentista.
+                  </p>
+                  <div>
+                    <a href="jornalum.html">
+                      <button class="btnpageum">Saiba Mais</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pageum" data-page="3">
+            <div class="pageq">
+              <div>
+                <h2>A MÁQUINA DE ESPIONAR</h2>
+                <h3>Sombras e traições da Guerra Fria</h3>
+              </div>
+              <div class="containerpageq">
+                <div class="trai">
+                  <img src="imgs/espiaostasi.png" alt="IMAGEM Espião" />
+                  <div>
+                    <h4>TRAIÇÃO <br />EM 1951</h4>
+                    <p>
+                      O espião duplo <br />
+                      de Londres
+                    </p>
+                  </div>
+                </div>
+                <div class="stasi">
+                  <div class="sta">
+                    <div>
+                      <h5>STASI</h5>
+                      <p>
+                        O Olho da<br />
+                        Alemanha<br />
+                        Oriental
+                      </p>
+                    </div>
+                    <div>
+                      <img src="imgs/espaiotrai.png" alt="IMAGEM Espião" />
+                    </div>
+                  </div>
+                  <h6>
+                    James Bond, agentes duplos e a agência<br />
+                    de espionagem que mudou o mundo.
+                  </h6>
+                </div>
+              </div>
+              <div class="btnpageqcont">
+                <a href="jornalum.html">
+                  <button class="btnpageq">Saiba Mais</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="pageum" data-page="4">
+            <div class="paget">
+              <div>
+                <h2>Espiões na Fronteira</h2>
+                <h3>MURO DE BERLIM</h3>
+              </div>
+              <img src="imgs/fundtraicoes.png" alt="Imagem" />
+              <div class="pagetbtn">
+                <div class="textpaget">
+                  <p>
+                    O muro não dividia só cidades, mas também informações
+                    secretas.
+                  </p>
+                </div>
+                <div>
+                  <a href="jornalum.html">
+                    <button class="btnpaget">Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pageum" data-page="5">
+            <div class="pagef">
+              <div class="centropagef">
+                <div>
+                  <h2>CULTURA POP X REALIDADE</h2>
+                </div>
+                <div class="imgspagef">
+                  <div class="contpagef">
+                    <h3>JAMES BOND VS VIDA REAL</h3>
+                    <div class="textpagef">
+                      <p>
+                        Enquanto o cinema glamorizava, a realidade era feita de
+                        paranoia e rotina. Ação e glamour davam lugar a dossiês
+                        e a vida nas sombras.
+                      </p>
+                    </div>
+                    <a href="jornalum.html">
+                      <button class="btnpagef">Saiba Mais</button>
+                    </a>
+                  </div>
+                  <img src="imgs/james.png" alt="IMAGEM" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pageum" data-page="6">
+            <div class="pages">
+              <h2>O OLHO NO CÉU</h2>
+              <h3>Satélites Espiões: A Nova Fronteira do Conflito.</h3>
+              <div class="contpages">
+                <div class="imgpages">
+                  <img src="imgs/satelite.png" alt="Satélite" />
+                </div>
+                <div class="textpages">
+                  <p>
+                    A corrida também chegou ao espaço, com satélites espionando
+                    bases militares.
+                  </p>
+                  <a href="jornalum.html">
+                    <button class="btnpages">Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pageum" data-page="7">
+            <div class="pagese">
+              <h2>O ÚLTIMO DOSSIÊ</h2>
+              <img src="imgs/last.png" alt="Imagem de fundo" />
+              <div class="over">
+                <p>
+                  Quando o Muro caiu, a verdade veio à tona… mas a espionagem
+                  nunca deixou de viver no <b>escuro.</b>
+                </p>
+                <div>
+                  <a href="jornalum.html">
+                    <button class="btnpages">Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cursor-left"></div>
+          <div class="cursor-right"></div>
+          <div class="transition-tv"></div>
+        </section>
+        <section class="descolonizacao" id="descolonizacao">
+          <div class="decadas-container">
+            <div class="decada ligado" data-decada="50">
+              <div class="primeiradecada">
+                <div class="titledesco">
+                  <h1 class="ti">DESCOLONIZAÇÃO</h1>
+                </div>
+                <div>
+                  <img src="imgs/gandhi.png" alt="GANDHI" />
+                  <div class="pd">
+                    <h2 class="titledecada">
+                      DÉCADA DE<br /><span>1950</span>
+                    </h2>
+                    <h3>
+                      <b>As independências começam:</b><br />
+                      Índia inspira outros países<br />
+                      asiáticos e africanos.
+                    </h3>
+                    <div class="pdli">
+                      <div class="pdi">
+                        <p
+                          class="fi fi-ly"
+                          data-info="Líbia: Independência em 1951."
+                        ></p>
+                        <span
+                          class="fi fi-it"
+                          data-info="Itália: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-kh"
+                          data-info="Camboja: Independência em 1953."
+                        ></p>
+                        <span
+                          class="fi fi-fr"
+                          data-info="França: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-la"
+                          data-info="Laos: Independência em 1954."
+                        ></p>
+                        <span
+                          class="fi fi-fr"
+                          data-info="França: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-sd"
+                          data-info="Sudão: Independência em 1956."
+                        ></p>
+                        <div class="pdlo">
+                          <span
+                            class="fi fi-eg"
+                            data-info="Egito: Co-administrador."
+                          ></span>
+                          <span
+                            class="fi fi-gb"
+                            data-info="Reino Unido: Co-administrador."
+                          ></span>
+                        </div>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-tn"
+                          data-info="Tunísia: Independência em 1956."
+                        ></p>
+                        <span
+                          class="fi fi-fr"
+                          data-info="França: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-ma"
+                          data-info="Marrocos: Independência em 1956."
+                        ></p>
+                        <span
+                          class="fi fi-fr"
+                          data-info="França: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-gh"
+                          data-info="Gana: Independência em 1957."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-my"
+                          data-info="Malásia: Independência em 1957."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-gn"
+                          data-info="Guiné: Independência em 1958."
+                        ></p>
+                        <span
+                          class="fi fi-fr"
+                          data-info="França: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-cm"
+                          data-info="Camarões: Independência em 1959."
+                        ></p>
+                        <span
+                          class="fi fi-fr"
+                          data-info="França: Antiga potência colonial."
+                        ></span>
+                      </div>
+                    </div>
+                    <div class="decada-selector">
+                      <div class="selector">
+                        <h4>Trocar Década</h4>
+                        <div>
+                          <button data-target="50" class="ligado">'50</button>
+                          <button data-target="60">'60</button>
+                          <button data-target="70">'70</button>
+                          <button data-target="80">'80</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="decada" data-decada="60">
+              <div class="segundadecada">
+                <div class="titledescose">
+                  <h1 class="ti">DESCOLONIZAÇÃO</h1>
+                </div>
+                <div>
+                  <div class="sd">
+                    <h2 class="titledecada">
+                      DÉCADA DE<br /><span>1960</span>
+                    </h2>
+                    <h3>
+                      <b>O auge das independências:</b><br />
+                      Diversos países africanos conquistam<br />
+                      sua soberania nesta década.
+                    </h3>
+                    <div class="pdli">
+                      <div class="pdi">
+                        <p
+                          class="fi fi-sn"
+                          data-info="Senegal: Independência em 1960."
+                        ></p>
+                        <span
+                          class="fi fi-fr"
+                          data-info="França: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-ci"
+                          data-info="Costa do Marfim: Independência em 1960."
+                        ></p>
+                        <span
+                          class="fi fi-fr"
+                          data-info="França: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-cd"
+                          data-info="Congo (Kinshasa): Independência em 1960."
+                        ></p>
+                        <span
+                          class="fi fi-be"
+                          data-info="Bélgica: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-ml"
+                          data-info="Mali: Independência em 1960."
+                        ></p>
+                        <span
+                          class="fi fi-fr"
+                          data-info="França: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-ne"
+                          data-info="Níger: Independência em 1960."
+                        ></p>
+                        <span
+                          class="fi fi-fr"
+                          data-info="França: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-bf"
+                          data-info="Burkina Faso (Alto Volta): Independência em 1960."
+                        ></p>
+                        <span
+                          class="fi fi-fr"
+                          data-info="França: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-td"
+                          data-info="Chade: Independência em 1960."
+                        ></p>
+                        <span
+                          class="fi fi-fr"
+                          data-info="França: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-ng"
+                          data-info="Nigéria: Independência em 1960."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-tz"
+                          data-info="Tanzânia: Independência em 1961."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-ug"
+                          data-info="Uganda: Independência em 1962."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                    </div>
+                    <div class="decada-selector">
+                      <div class="selectorsd">
+                        <h4>Trocar Década</h4>
+                        <div>
+                          <button data-target="50">'50</button>
+                          <button data-target="60" class="ligado">'60</button>
+                          <button data-target="70">'70</button>
+                          <button data-target="80">'80</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="imgs/kwane.png" alt="NKRUMAH" />
+                </div>
+              </div>
+            </div>
+            <div class="decada" data-decada="70">
+              <div class="terceiradecada">
+                <div class="titledesco">
+                  <h1 class="ti">DESCOLONIZAÇÃO</h1>
+                </div>
+                <div>
+                  <img src="imgs/samora.png" alt="Samora" />
+                  <div class="pd">
+                    <h2 class="titledecada">
+                      DÉCADA DE<br /><span>1970</span>
+                    </h2>
+                    <h3>
+                      <b>O fim dos impérios:</b><br />
+                      Portugal perde suas colônias<br />
+                      e outras nações se libertam.
+                    </h3>
+                    <div class="pdli">
+                      <div class="pdi">
+                        <p
+                          class="fi fi-to"
+                          data-info="Tonga: Independência em 1970."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-fj"
+                          data-info="Fiji: Independência em 1970."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-qa"
+                          data-info="Catar: Independência em 1971."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-bh"
+                          data-info="Bahrein: Independência em 1971."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-ae"
+                          data-info="Emirados Árabes Unidos: Independência em 1971."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-gw"
+                          data-info="Guiné-Bissau: Independência em 1974."
+                        ></p>
+                        <span
+                          class="fi fi-pt"
+                          data-info="Portugal: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-mz"
+                          data-info="Moçambique: Independência em 1975."
+                        ></p>
+                        <span
+                          class="fi fi-pt"
+                          data-info="Portugal: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-ao"
+                          data-info="Angola: Independência em 1975."
+                        ></p>
+                        <span
+                          class="fi fi-pt"
+                          data-info="Portugal: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-cv"
+                          data-info="Cabo Verde: Independência em 1975."
+                        ></p>
+                        <span
+                          class="fi fi-pt"
+                          data-info="Portugal: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-st"
+                          data-info="São Tomé e Príncipe: Independência em 1975."
+                        ></p>
+                        <span
+                          class="fi fi-pt"
+                          data-info="Portugal: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-km"
+                          data-info="Comores: Independência em 1975."
+                        ></p>
+                        <span
+                          class="fi fi-fr"
+                          data-info="França: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-sc"
+                          data-info="Seicheles: Independência em 1976."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-dj"
+                          data-info="Djibuti: Independência em 1977."
+                        ></p>
+                        <span
+                          class="fi fi-fr"
+                          data-info="França: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-sb"
+                          data-info="Ilhas Salomão: Independência em 1978."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-tv"
+                          data-info="Tuvalu: Independência em 1978."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-ki"
+                          data-info="Kiribati: Independência em 1979."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-vc"
+                          data-info="São Vicente e Granadinas: Independência em 1979."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                    </div>
+                    <div class="decada-selector">
+                      <div class="selectortd">
+                        <h4>Trocar Década</h4>
+                        <div>
+                          <button data-target="50">'50</button>
+                          <button data-target="60">'60</button>
+                          <button data-target="70" class="ligado">'70</button>
+                          <button data-target="80">'80</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="decada" data-decada="80">
+              <div class="quartadecada">
+                <div class="titledescoqu">
+                  <h1 class="ti">DESCOLONIZAÇÃO</h1>
+                </div>
+                <div>
+                  <div class="sd">
+                    <h2 class="titledecada">
+                      DÉCADA DE<br /><span>1980</span>
+                    </h2>
+                    <h3>
+                      <b>Um novo mapa:</b><br />
+                      O fim dos conflitos globais reflete<br />
+                      no mapa político do mundo.
+                    </h3>
+                    <div class="pdli">
+                      <div class="pdi">
+                        <p
+                          class="fi fi-zw"
+                          data-info="Zimbábue: Independência em 1980."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-vu"
+                          data-info="Vanuatu: Independência em 1980."
+                        ></p>
+                        <div class="pdlo">
+                          <span
+                            class="fi fi-gb"
+                            data-info="Reino Unido: Co-administrador."
+                          ></span>
+                          <span
+                            class="fi fi-fr"
+                            data-info="França: Co-administrador."
+                          ></span>
+                        </div>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-bz"
+                          data-info="Belize: Independência em 1981."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-ag"
+                          data-info="Antígua e Barbuda: Independência em 1981."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-kn"
+                          data-info="São Cristóvão e Neves: Independência em 1983."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-bn"
+                          data-info="Brunei: Independência em 1984."
+                        ></p>
+                        <span
+                          class="fi fi-gb"
+                          data-info="Reino Unido: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-mh"
+                          data-info="Ilhas Marshall: Independência em 1986."
+                        ></p>
+                        <span
+                          class="fi fi-us"
+                          data-info="EUA: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-fm"
+                          data-info="Micronésia: Independência em 1986."
+                        ></p>
+                        <span
+                          class="fi fi-us"
+                          data-info="EUA: Antiga potência colonial."
+                        ></span>
+                      </div>
+                      <div class="pdi">
+                        <p
+                          class="fi fi-na"
+                          data-info="Namíbia: Independência em 1988."
+                        ></p>
+                        <span
+                          class="fi fi-za"
+                          data-info="África do Sul: Antiga potência colonial."
+                        ></span>
+                      </div>
+                    </div>
+                    <div class="decada-selector">
+                      <div class="selectorqd">
+                        <h4>Trocar Década</h4>
+                        <div>
+                          <button data-target="50">'50</button>
+                          <button data-target="60">'60</button>
+                          <button data-target="70">'70</button>
+                          <button data-target="80" class="ligado">'80</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="imgs/nelson.png" alt="Nelson Mandela" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="fimdaguerra" id="fimdaguerra">
+          <div class="outer">
+            <div class="scroll-line">
+              <div class="scroll-progress"></div>
+              <div class="scroll-points"></div>
+            </div>
+            <div class="background"></div>
+            <div class="horizontal-content" id="horizontal-content">
+              <div class="it" data-bg="url('/imgs/fundofirst.png')">
+              </div>
+              <div class="it" data-bg="#3d9970"></div>
+              <div class="it" data-bg="#ff4136"></div>
+              <div class="it" data-bg="#85144b"></div>
+              <div class="it" data-bg="#001f3f"></div>
+              <div class="it" data-bg="#3d9970"></div>
+              <div class="it" data-bg="#ff4136"></div>
+              <div class="it" data-bg="#85144b"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+  <script src="main.js"></script>
+</html>

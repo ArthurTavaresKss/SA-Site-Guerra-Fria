@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>O DIÁRIO HISTÓRICO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&family=Special+Elite&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+        header{
+      position: relative;
+    }
+    .voltar{
+      position: absolute;
+      left: -1%;
+      top: -15%;
+    }
+    .voltar:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: all 0.5s ease;
+    }
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: #3d3a33;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      color: #1a1a1a;
+      font-size: 16px;
+    }
+
+    .jornal {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px;
+      background-color: #f2e6c9; /* Cor de papel envelhecido */
+      border: 1px solid #000;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    }
+
+    /* --- CABEÇALHO DO JORNAL --- */
+    .cabecalho {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 4px double #000;
+      margin-bottom: 20px;
+    }
+
+    .nome-jornal {
+      font-family: 'Oswald', sans-serif;
+      font-size: 100px;
+      margin: 0;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .meta-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Special Elite', monospace;
+      font-size: 15px;
+      margin-top: 10px;
+      padding: 0 10px;
+    }
+
+    /* --- CONTEÚDO E COLUNAS --- */
+    .conteudo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .colunas {
+      column-count: 3;
+      column-gap: 40px;
+      column-rule: 1px solid #ccc;
+    }
+
+    .manchete-principal {
+      font-family: 'Oswald', sans-serif;
+      font-size: 64px;
+      text-align: center;
+      line-height: 1.1;
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
+      column-span: all;
+    }
+
+    .subtitulo-artigo {
+      font-style: italic;
+      text-align: center;
+      font-size: 20px;
+      margin: 0 0 20px 0;
+      column-span: all;
+      border-bottom: 1px solid #000;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .colunas p {
+      text-align: justify;
+      margin-top: 0;
+    }
+
+    .colunas p.primeiro-paragrafo::first-letter {
+      font-size: 48px;
+      font-weight: bold;
+      float: left;
+      margin-right: 5px;
+      line-height: 0.8;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    /* --- IMAGENS E LEGENDAS --- */
+    figure {
+      margin: 0 0 20px 0;
+      break-inside: avoid;
+    }
+
+    .foto {
+      width: 100%;
+      filter: grayscale(100%) contrast(110%) brightness(95%);
+      border: 1px solid #000;
+      padding: 4px;
+      background: #fff;
+    }
+
+    figcaption {
+      font-size: 13px;
+      text-align: center;
+      margin-top: 5px;
+      font-style: italic;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    /* --- SEPARADORES E TÍTULOS SECUNDÁRIOS --- */
+    .separador {
+        border: 0;
+        border-top: 2px solid #000;
+        margin: 25px 0;
+        width: 100%;
+    }
+
+    .artigo-secundario h3 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 28px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    /* --- NOVOS ELEMENTOS --- */
+    /* Caixa de Destaque para notícias curtas */
+    .caixa-destaque {
+        border: 1px solid #555;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        margin-top: 20px;
+        break-inside: avoid;
+    }
+    .caixa-destaque h4 {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 0 0 10px 0;
+        text-align: center;
+        border-bottom: 1px solid #888;
+        padding-bottom: 5px;
+    }
+    .caixa-destaque p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    /* Bloco de Anúncio */
+    .anuncio {
+        border: 2px dashed #333;
+        padding: 15px;
+        text-align: center;
+        margin-top: 20px;
+        break-inside: avoid;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    .anuncio p {
+        font-family: 'Special Elite', monospace;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+    .anuncio .produto {
+        font-family: 'Oswald', sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="jornal">
+    <header class="cabecalho">
+      <a href="/index.html">
+            <div class="voltar">
+        <img src="/imgs/voltar.png" alt="↩️" width="90px" height="auto">
+      </div>
+      </a>
+      <h1 class="nome-jornal">O Diário Histórico</h1>
+      <div class="meta-info">
+        <span>SEGUNDA FEIRA, 7 DE MAIO DE 1954</span>
+        <span>EDIÇÃO ESPECIAL - Nº 1.247</span>
+      </div>
+    </header>
+
+    <div class="conteudo">
+      <h2 class="manchete-principal">A BATALHA DE DIEN BIEN PHU MUDA O DESTINO DA INDOCHINA</h2>
+      <p class="subtitulo-artigo">Após anos de conflito, forças francesas enfrentam derrota iminente em Dien Bien Phu, mudando o cenário geopolítico do Sudeste Asiático.</p>
+
+      <div class="colunas">
+        <p class="primeiro-paragrafo">
+          A Guerra da Indochina, iniciada em 1946, chega ao seu momento mais decisivo. Após anos de confrontos entre a França e o movimento de independência Viet Minh, a Batalha de Dien Bien Phu, travada desde março de 1954, resultou em uma derrota esmagadora para os franceses. O mundo acompanha com tensão as consequências políticas que se desenham.
+        </p>
+        <p>
+          O Viet Minh, liderado por Ho Chi Minh, combina ideais nacionalistas e comunistas na luta pela independência do Vietnã. Usando táticas de guerrilha, conhecendo profundamente o terreno e contando com apoio popular, os combatentes conseguiram superar a superioridade tecnológica francesa.
+        </p>
+
+        <figure>
+          <img class="foto" src="https://preview.redd.it/is-there-a-similar-pattern-helmet-netting-to-this-v0-owezap2lieua1.jpg?auto=webp&s=cbebb4ee218a4023e236aaafe53b34c87a0c095a" alt="Soldados em meio à selva.">
+          <figcaption>Combatentes do Viet Minh durante operações na selva vietnamita.</figcaption>
+        </figure>
+
+        <p>
+          A guerra transformou-se em um conflito internacional. Enquanto o Viet Minh recebeu apoio militar e logístico da União Soviética e da China comunista, a França contou com financiamento e armamentos fornecidos pelos Estados Unidos. O confronto local tornou-se um palco estratégico da Guerra Fria.
+        </p>
+
+        <div class="artigo-secundario">
+            <hr class="separador">
+            <h3>CONFERÊNCIA DE GENEBRA: NOVOS RUMOS PARA A INDOCHINA</h3>
+            <p>
+                Com a derrota francesa, líderes mundiais se reúnem na Conferência de Genebra para definir o futuro do Vietnã. O acordo estabeleceu a divisão provisória do país no paralelo 17, criando o Vietnã do Norte, sob regime comunista, e o Vietnã do Sul, apoiado pelos Estados Unidos. Este marco histórico prepara o terreno para o surgimento da Guerra do Vietnã, anos depois.
+            </p>
+        </div>
+
+        <div class="caixa-destaque">
+            <h4>NOTÍCIAS INTERNACIONAIS</h4>
+            <p><strong>CHINA:</strong> Pequim reforça apoio ao Viet Minh, enviando armas e conselheiros militares para acelerar o processo de independência.</p>
+            <p><strong>EUA:</strong> Governo norte-americano aumenta investimentos no Vietnã do Sul, temendo a expansão do comunismo no Sudeste Asiático.</p>
+        </div>
+
+        <p>
+          A queda de Dien Bien Phu representa o fim do domínio colonial francês na região e inaugura uma nova fase de instabilidade política. A Guerra da Indochina termina oficialmente com os Acordos de Genebra, mas o conflito ideológico na região está longe de acabar.
+        </p>
+        
+        <figure>
+            <img class="foto" src="https://tse1.mm.bing.net/th/id/OIP.1d__KbFTXGyOp1jMJf-5gQHaEe?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Mesa de negociações.">
+            <figcaption>Forças da indochina levantando uma bandeira.</figcaption>
+        </figure>
+
+        <div class="anuncio">
+            <p class="produto">CAFÉ DO ORIENTE</p>
+            <p>O sabor que atravessa fronteiras e une culturas.</p>
+            <p>Encontre nas principais casas de comércio da capital.</p>
+        </div>
+
+        <div class="artigo-secundario">
+            <hr class="separador">
+            <h3>LAOS E CAMBOJA: NOVAS NAÇÕES NO MAPA</h3>
+            <p>
+                Os Acordos de Genebra não alteraram apenas o destino do Vietnã. Laos e Camboja, também ex-colônias francesas, conquistam a independência formal. Entretanto, a influência das grandes potências e os conflitos internos ainda colocam o futuro dessas jovens nações em risco.
+            </p>
+        </div>
+
+      </div> </div> </div> </body>
+</html>

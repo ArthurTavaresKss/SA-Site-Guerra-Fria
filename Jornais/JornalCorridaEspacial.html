@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>O DIÁRIO HISTÓRICO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&family=Special+Elite&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+        header{
+      position: relative;
+    }
+    .voltar{
+      position: absolute;
+      left: -1%;
+      top: -15%;
+    }
+    .voltar:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: all 0.5s ease;
+    }
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: #3d3a33;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      color: #1a1a1a;
+      font-size: 16px;
+    }
+
+    .jornal {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px;
+      background-color: #f2e6c9; /* Cor de papel envelhecido */
+      border: 1px solid #000;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    }
+
+    /* --- CABEÇALHO DO JORNAL --- */
+    .cabecalho {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 4px double #000;
+      margin-bottom: 20px;
+    }
+
+    .nome-jornal {
+      font-family: 'Oswald', sans-serif;
+      font-size: 100px;
+      margin: 0;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .meta-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Special Elite', monospace;
+      font-size: 15px;
+      margin-top: 10px;
+      padding: 0 10px;
+    }
+
+    /* --- CONTEÚDO E COLUNAS --- */
+    .conteudo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .colunas {
+      column-count: 3;
+      column-gap: 40px;
+      column-rule: 1px solid #ccc;
+    }
+
+    .manchete-principal {
+      font-family: 'Oswald', sans-serif;
+      font-size: 64px;
+      text-align: center;
+      line-height: 1.1;
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
+      column-span: all;
+    }
+
+    .subtitulo-artigo {
+      font-style: italic;
+      text-align: center;
+      font-size: 20px;
+      margin: 0 0 20px 0;
+      column-span: all;
+      border-bottom: 1px solid #000;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .colunas p {
+      text-align: justify;
+      margin-top: 0;
+    }
+
+    .colunas p.primeiro-paragrafo::first-letter {
+      font-size: 48px;
+      font-weight: bold;
+      float: left;
+      margin-right: 5px;
+      line-height: 0.8;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    /* --- IMAGENS E LEGENDAS --- */
+    figure {
+      margin: 0 0 20px 0;
+      break-inside: avoid;
+    }
+
+    .foto {
+      width: 100%;
+      filter: grayscale(100%) contrast(110%) brightness(95%);
+      border: 1px solid #000;
+      padding: 4px;
+      background: #fff;
+    }
+
+    figcaption {
+      font-size: 13px;
+      text-align: center;
+      margin-top: 5px;
+      font-style: italic;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    /* --- SEPARADORES E TÍTULOS SECUNDÁRIOS --- */
+    .separador {
+        border: 0;
+        border-top: 2px solid #000;
+        margin: 25px 0;
+        width: 100%;
+    }
+
+    .artigo-secundario h3 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 28px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    /* --- NOVOS ELEMENTOS --- */
+    /* Caixa de Destaque para notícias curtas */
+    .caixa-destaque {
+        border: 1px solid #555;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        margin-top: 20px;
+        break-inside: avoid;
+    }
+    .caixa-destaque h4 {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 0 0 10px 0;
+        text-align: center;
+        border-bottom: 1px solid #888;
+        padding-bottom: 5px;
+    }
+    .caixa-destaque p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    /* Bloco de Anúncio */
+    .anuncio {
+        border: 2px dashed #333;
+        padding: 15px;
+        text-align: center;
+        margin-top: 20px;
+        break-inside: avoid;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    .anuncio p {
+        font-family: 'Special Elite', monospace;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+    .anuncio .produto {
+        font-family: 'Oswald', sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="jornal">
+    <header class="cabecalho">
+      <a href="/index.html">
+            <div class="voltar">
+        <img src="/imgs/voltar.png" alt="↩️" width="90px" height="auto">
+      </div>
+      </a>
+      <h1 class="nome-jornal">O Diário Histórico</h1>
+      <div class="meta-info">
+        <span>SEGUNDA-FEIRA, 21 DE JULHO DE 1969</span>
+        <span>EDIÇÃO ESPECIAL - Nº 1420</span>
+      </div>
+    </header>
+
+    <div class="conteudo">
+      <h2 class="manchete-principal">O HOMEM CHEGA À LUA: UMA NOVA ERA COMEÇA</h2>
+      <p class="subtitulo-artigo">Apollo 11 pousa na superfície lunar; corrida espacial chega ao auge com vitória dos Estados Unidos.</p>
+
+      <div class="colunas">
+        <p class="primeiro-paragrafo">
+          Em 20 de julho de 1969, o astronauta Neil Armstrong fez história ao se tornar o primeiro ser humano a pisar na superfície da Lua, declarando: “Um pequeno passo para um homem, um salto gigante para a humanidade.” A conquista marcou o ponto alto da Corrida Espacial, disputa entre Estados Unidos e União Soviética iniciada no início da década de 1950.
+        </p>
+        <p>
+          A Corrida Espacial começou no contexto da Guerra Fria, quando a União Soviética surpreendeu o mundo com o lançamento do Sputnik 1, em 4 de outubro de 1957, o primeiro satélite artificial da história. Em resposta, os Estados Unidos criaram a NASA em 1958, iniciando um investimento maciço em ciência e tecnologia.
+        </p>
+
+        <figure>
+          <img class="foto" src="https://imagenes.elpais.com/resizer/v2/QW2XKY7NVBNLTJWXU276FSURYY.jpg?auth=871b2a7dadd8f4a4bb76f85eed865f86bdfb6df72ba486ff5b41c17df14d7d9c&width=414">
+          <figcaption>Neil Armstrong pisa na Lua; missão Apollo 11 faz história, 20 de julho de 1969.</figcaption>
+        </figure>
+
+        <p>
+          Em 12 de abril de 1961, a União Soviética alcançou outra vitória com Yuri Gagarin, o primeiro homem no espaço, a bordo da nave Vostok 1. O feito chocou o Ocidente e aumentou a pressão sobre os Estados Unidos. Para recuperar terreno, o presidente John F. Kennedy anunciou em 1961 o Projeto Apollo, prometendo levar um homem à Lua antes do fim da década.
+        </p>
+
+        <div class="artigo-secundario">
+            <hr class="separador">
+            <h3>CIÊNCIA, PODER E PROPAGANDA</h3>
+            <p>
+                A Corrida Espacial não era apenas uma competição científica, mas também política e ideológica. Cada avanço representava uma demonstração de poder entre capitalismo e socialismo. Para as duas superpotências, conquistar o espaço significava influenciar o futuro da humanidade e provar a superioridade de seus modelos econômicos.
+            </p>
+        </div>
+
+        <div class="caixa-destaque">
+            <h4>MARCOS HISTÓRICOS</h4>
+            <p><strong>1957:</strong> URSS lança o Sputnik 1, o primeiro satélite artificial.</p>
+            <p><strong>1961:</strong> Yuri Gagarin se torna o primeiro homem no espaço.</p>
+            <p><strong>1962:</strong> John Glenn realiza a primeira órbita completa da Terra pelos EUA.</p>
+            <p><strong>1966:</strong> URSS realiza o primeiro pouso suave na Lua com a sonda Luna 9.</p>
+            <p><strong>1969:</strong> EUA realizam o primeiro pouso tripulado na Lua com a Apollo 11.</p>
+        </div>
+
+        <p>
+          A missão Apollo 11 foi um marco tecnológico e humano. A bordo estavam Neil Armstrong, Buzz Aldrin e Michael Collins. Após uma viagem de 384 mil km, a nave pousou no Mar da Tranquilidade. A transmissão do evento foi acompanhada por mais de 600 milhões de pessoas em todo o mundo.
+        </p>
+        
+        <figure>
+            <img class="foto" src="https://tm.ibxk.com.br///2019/06/19/19184539710369.jpg?ims=1200x675">
+            <figcaption>Equipe da Apollo 11 retorna com segurança à Terra, saudada como heroína mundial.</figcaption>
+        </figure>
+
+        <div class="anuncio">
+            <p class="produto">RÁDIO TRANSGLOBAL</p>
+            <p>Fique informado sobre cada avanço no conflito do Afeganistão com som de alta fidelidade.</p>
+            <p>Disponível nas melhores lojas de eletrônicos.</p>
+        </div>
+
+        <div class="artigo-secundario">
+            <hr class="separador">
+            <h3>E AGORA, O QUE VEM DEPOIS DA LUA?</h3>
+            <p>
+                Após a chegada do homem à Lua, cientistas já projetam os próximos passos: bases lunares, missões a Marte e estações espaciais permanentes. A Corrida Espacial pode estar chegando ao fim, mas a exploração do universo está apenas começando. A humanidade acaba de dar seu primeiro grande salto rumo ao infinito.
+
+      </div> </div> </div> </body>
+</html>

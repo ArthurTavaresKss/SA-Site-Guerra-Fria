@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>O DIÁRIO HISTÓRICO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&family=Special+Elite&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+        header{
+      position: relative;
+    }
+    .voltar{
+      position: absolute;
+      left: -1%;
+      top: -15%;
+    }
+    .voltar:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: all 0.5s ease;
+    }
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: #3d3a33;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      color: #1a1a1a;
+      font-size: 16px;
+    }
+
+    .jornal {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px;
+      background-color: #f2e6c9; /* Cor de papel envelhecido */
+      border: 1px solid #000;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    }
+
+    /* --- CABEÇALHO DO JORNAL --- */
+    .cabecalho {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 4px double #000;
+      margin-bottom: 20px;
+    }
+
+    .nome-jornal {
+      font-family: 'Oswald', sans-serif;
+      font-size: 100px;
+      margin: 0;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .meta-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Special Elite', monospace;
+      font-size: 15px;
+      margin-top: 10px;
+      padding: 0 10px;
+    }
+
+    /* --- CONTEÚDO E COLUNAS --- */
+    .conteudo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .colunas {
+      column-count: 3;
+      column-gap: 40px;
+      column-rule: 1px solid #ccc;
+    }
+
+    .manchete-principal {
+      font-family: 'Oswald', sans-serif;
+      font-size: 64px;
+      text-align: center;
+      line-height: 1.1;
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
+      column-span: all;
+    }
+
+    .subtitulo-artigo {
+      font-style: italic;
+      text-align: center;
+      font-size: 20px;
+      margin: 0 0 20px 0;
+      column-span: all;
+      border-bottom: 1px solid #000;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .colunas p {
+      text-align: justify;
+      margin-top: 0;
+    }
+
+    .colunas p.primeiro-paragrafo::first-letter {
+      font-size: 48px;
+      font-weight: bold;
+      float: left;
+      margin-right: 5px;
+      line-height: 0.8;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    /* --- IMAGENS E LEGENDAS --- */
+    figure {
+      margin: 0 0 20px 0;
+      break-inside: avoid;
+    }
+
+    .foto {
+      width: 100%;
+      filter: grayscale(100%) contrast(110%) brightness(95%);
+      border: 1px solid #000;
+      padding: 4px;
+      background: #fff;
+    }
+
+    figcaption {
+      font-size: 13px;
+      text-align: center;
+      margin-top: 5px;
+      font-style: italic;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    /* --- SEPARADORES E TÍTULOS SECUNDÁRIOS --- */
+    .separador {
+        border: 0;
+        border-top: 2px solid #000;
+        margin: 25px 0;
+        width: 100%;
+    }
+
+    .artigo-secundario h3 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 28px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    /* --- NOVOS ELEMENTOS --- */
+    /* Caixa de Destaque para notícias curtas */
+    .caixa-destaque {
+        border: 1px solid #555;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        margin-top: 20px;
+        break-inside: avoid;
+    }
+    .caixa-destaque h4 {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 0 0 10px 0;
+        text-align: center;
+        border-bottom: 1px solid #888;
+        padding-bottom: 5px;
+    }
+    .caixa-destaque p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    /* Bloco de Anúncio */
+    .anuncio {
+        border: 2px dashed #333;
+        padding: 15px;
+        text-align: center;
+        margin-top: 20px;
+        break-inside: avoid;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    .anuncio p {
+        font-family: 'Special Elite', monospace;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+    .anuncio .produto {
+        font-family: 'Oswald', sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="jornal">
+    <header class="cabecalho">
+      <a href="/index.html">
+            <div class="voltar">
+        <img src="/imgs/voltar.png" alt="↩️" width="90px" height="auto">
+      </div>
+      </a>
+      <h1 class="nome-jornal">O Diário Histórico</h1>
+      <div class="meta-info">
+        <span>SEGUNDA-FEIRA, 27 DE JULHO DE 1953</span>
+        <span>EDIÇÃO ESPECIAL - Nº 958</span>
+      </div>
+    </header>
+
+    <div class="conteudo">
+      <h2 class="manchete-principal">GUERRA DA COREIA CHEGA AO FIM: ARMISTÍCIO SELA DIVISÃO DEFINITIVA DA PENÍNSULA</h2>
+      <p class="subtitulo-artigo">Após três anos de combates, Coreia do Norte e Coreia do Sul assinam armistício em Panmunjom, consolidando a separação no paralelo 38.</p>
+
+      <div class="colunas">
+        <p class="primeiro-paragrafo">
+          A Guerra da Coreia, iniciada em 25 de junho de 1950, chega ao fim após três anos de batalhas sangrentas. O conflito começou quando tropas da Coreia do Norte, apoiadas pela União Soviética e pela China, invadiram a Coreia do Sul. A resposta veio rapidamente com a intervenção militar das Nações Unidas, liderada pelos Estados Unidos, transformando a península coreana em um dos principais campos de batalha da Guerra Fria.
+        <p>
+          Sob o comando do líder Kim Il-sung, os norte-coreanos avançaram rapidamente, conquistando quase toda a Coreia do Sul no início do conflito. Porém, com a intervenção norte-americana e o envio de reforços internacionais, o exército aliado contra-atacou, recuperando territórios perdidos e empurrando as tropas comunistas para o norte.
+        </p>
+
+        <figure>
+          <img class="foto" src="https://operamundi.uol.com.br/wp-content/uploads/2023/10/Pusan_Perimeter_Sept_4.jpg">
+          <figcaption>Tropas da ONU avançam na linha de frente durante a Batalha do Rio Nakdong.</figcaption>
+        </figure>
+
+        <p>
+          A guerra entrou em um impasse a partir de 1951, com intensas batalhas no entorno do paralelo 38. Milhares de soldados foram mortos de ambos os lados, enquanto civis enfrentavam fome, deslocamento e destruição em larga escala. Apesar das negociações diplomáticas, os combates continuaram até o armistício de 1953.
+        </p>
+
+        <div class="artigo-secundario">
+            <hr class="separador">
+            <h3>ARMISTÍCIO DE PANMUNJOM DEFINE NOVAS FRONTEIRAS</h3>
+            <p>
+                Em 27 de julho de 1953, foi assinado o Acordo de Armistício de Panmunjom, que estabeleceu a divisão definitiva da península coreana. A Coreia do Norte manteve seu regime comunista, apoiado por Moscou e Pequim, enquanto a Coreia do Sul permaneceu sob influência dos Estados Unidos. A fronteira foi fixada na Zona Desmilitarizada (DMZ), que permanece até hoje como um dos locais mais tensos do planeta.
+            </p>
+        </div>
+
+        <div class="caixa-destaque">
+            <h4>NOTÍCIAS INTERNACIONAIS</h4>
+            <p><strong>CHINA:</strong> Tropas chinesas da “Força dos Voluntários do Povo” desempenharam papel crucial na resistência norte-coreana.</p>
+            <p><strong>EUA:</strong> O presidente Dwight D. Eisenhower anunciou reforços militares e apoio financeiro massivo à Coreia do Sul, reforçando a presença americana no Pacífico.</p>
+        </div>
+
+        <p>
+          Apesar do armistício, nenhum tratado de paz definitivo foi assinado. Tecnicamente, as duas Coreias permanecem em guerra até hoje. A península saiu devastada, com milhões de mortos e cidades inteiras destruídas, marcando para sempre a história da região e intensificando a disputa ideológica entre Estados Unidos e União Soviética.
+        </p>
+        
+        <figure>
+            <img class="foto" src="https://static.todamateria.com.br/upload/gu/er/guerradacoreiapaz.jpg">
+            <figcaption>Líderes coreanos e representantes da ONU assinam o armistício em Panmunjom.</figcaption>
+        </figure>
+
+        <div class="anuncio">
+            <p class="produto">RÁDIO PIONEIRO</p>
+            <p>Sintonize o mundo! Acompanhe as últimas notícias internacionais com som cristalino.</p>
+            <p>Disponível nas melhores lojas de eletrônicos da capital.</p>
+        </div>
+
+        <div class="artigo-secundario">
+            <hr class="separador">
+            <h3>DUAS COREIAS, DOIS MUNDOS</h3>
+            <p>
+                Após o armistício, a península coreana permaneceu dividida em dois regimes totalmente opostos. Enquanto a Coreia do Norte desenvolveu um Estado comunista centralizado, a Coreia do Sul apostou em alianças com o Ocidente e em um sistema capitalista. Essa divisão moldou os rumos políticos, econômicos e militares da região até os dias atuais.
+            </p>
+        </div>
+
+      </div> </div> </div> </body>
+</html>
