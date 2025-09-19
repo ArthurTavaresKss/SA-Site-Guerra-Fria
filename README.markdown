@@ -118,7 +118,7 @@ guerra-fria-site/
 
 1. **Clone o Repositório**:
    ```
-   git clone https://github.com/ArthurTavaresKss/SA-Site-Guerra-Fria.git
+   git clone https://github.com/seu-usuario/guerra-fria-site.git
    ```
 
 2. **Abra a pasta no VS Code e rode no Live Server**:
