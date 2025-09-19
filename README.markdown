@@ -86,6 +86,17 @@ guerra-fria-site/
 │
 ├── main.js                 # Script principal para interatividades
 │
+├── style1.css              # 10 Styles para o index
+├── style2.css
+├── style3.css
+├── style4.css
+├── style5.css
+├── style6.css
+├── style7.css
+├── style8.css
+├── style9.css
+├── style10.css
+│
 ├── imgs/                   # Pasta de imagens (ex.: menu.png, fechar.png, ocidente.jpg, etc.)
 │   │
 │   ├── Menufria.png
@@ -94,18 +105,7 @@ guerra-fria-site/
 │   └── ... (outras imagens históricas e assets)
 │
 ├── styles/                 # Pasta com 10 arquivos CSS modulares
-│   │
-│   ├── style1.css
-│   ├── style2.css
-│   ├── style3.css
-│   ├── style4.css
-│   ├── style5.css
-│   ├── style6.css
-│   ├── style7.css
-│   ├── style8.css
-│   ├── style9.css
-│   ├── style10.css
-│
+│   
 ├── jornais/                # Pasta com páginas de jornais históricos
 │   │
 │   ├── JornalCorridaEspacial.html  # Exemplo: Jornal sobre Apollo 11
