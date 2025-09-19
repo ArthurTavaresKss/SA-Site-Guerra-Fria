@@ -1,7 +1,6 @@
 # Guerra Fria: Um Site Educacional Interativo
 
 ![Banner da Guerra Fria](imgs/banner-guerra-fria.png)  
-*(Imagem ilustrativa; substitua pelo caminho real da imagem de banner no repositório, se disponível.)*
 
 ## Descrição
 
@@ -69,9 +68,8 @@ O site é dividido em seções temáticas, cada uma com interações únicas imp
 
 ### Recursos Gerais
 - **Animações e Observers**: Uso de IntersectionObserver para fade-ins em elementos ao scroll.
-- **Responsividade**: Layout adapta-se a telas mobile/desktop via CSS media queries (assumindo arquivos na pasta `styles`).
 - **Sem Dependências**: Todo o código é vanilla JS, sem bibliotecas como jQuery ou frameworks.
-- **Acessibilidade**: Alt texts em imagens, ARIA roles implícitos e navegação por teclado (parcial).
+- **Acessibilidade**: Alt texts em imagens e ARIA roles implícitos.
 
 ## Tecnologias Utilizadas
 
@@ -85,29 +83,34 @@ O site é dividido em seções temáticas, cada uma com interações únicas imp
 ```
 guerra-fria-site/
 ├── index.html              # Página principal com todo o conteúdo
+│
 ├── main.js                 # Script principal para interatividades
+│
 ├── imgs/                   # Pasta de imagens (ex.: menu.png, fechar.png, ocidente.jpg, etc.)
+│   │
 │   ├── Menufria.png
-│   ├── fecharfria.png
 │   ├── setaesquerda.png
 │   ├── setadireita.png
-│   ├── banner-guerra-fria.png (exemplo)
 │   └── ... (outras imagens históricas e assets)
+│
 ├── styles/                 # Pasta com 10 arquivos CSS modulares
-│   ├── reset.css           # Reset de estilos
-│   ├── menu.css            # Estilos do menu lateral
-│   ├── timeline.css        # Estilos da timeline de anos
-│   ├── muro.css            # Estilos da seção Cortina de Ferro
-│   ├── armamentista.css    # Estilos das barras de progresso
-│   ├── conflitos.css       # Estilos do carrossel de conflitos
-│   ├── espacial.css        # Estilos da corrida espacial
-│   ├── espionagem.css      # Estilos da seção de espionagem
-│   ├── descolonizacao.css  # Estilos dos painéis de décadas
-│   ├── fim.css             # Estilos da linha do tempo final
-│   └── main.css            # Estilos globais e imports
+│   │
+│   ├── style1.css
+│   ├── style2.css
+│   ├── style3.css
+│   ├── style4.css
+│   ├── style5.css
+│   ├── style6.css
+│   ├── style7.css
+│   ├── style8.css
+│   ├── style9.css
+│   ├── style10.css
+│
 ├── jornais/                # Pasta com páginas de jornais históricos
+│   │
 │   ├── JornalCorridaEspacial.html  # Exemplo: Jornal sobre Apollo 11
 │   └── ... (outros jornais para conflitos, espionagem, etc.)
+│
 └── README.md               # Esta documentação
 ```
 
@@ -118,9 +121,10 @@ guerra-fria-site/
    git clone https://github.com/seu-usuario/guerra-fria-site.git
    ```
 
-2. **Abra no Navegador**:
-   - Abra o arquivo `index.html` diretamente em um navegador moderno (Chrome, Firefox, etc.).
-   - Não requer servidor; é um site estático.
+2. **Abra a pasta no VS Code e rode no Live Server**:
+   - Abra a pasta clonada no Visual Studio Code.
+   - Instale a extensão Live Server, nas extensões do VS Code.
+   - Abra o arquivo `index.html` e clique no botão no canto inferior direito "Go Live".
 
 3. **Desenvolvimento**:
    - Edite os arquivos HTML/CSS/JS conforme necessário.
@@ -140,15 +144,11 @@ Ideias para melhorias:
 - Adicionar mais jornais históricos.
 - Implementar suporte a touch para mobile (ex.: swipe no carrossel).
 - Incluir áudio/vídeo embedados (ex.: discursos de Kennedy).
-- Otimizar performance para dispositivos low-end.
-
-## Licença
-
-Este projeto é licenciado sob a [MIT License](LICENSE). Sinta-se livre para usar, modificar e distribuir, desde que credite o autor original.
+- Adicionar responsividade.
 
 ## Créditos
 
-- **Autor**: [Seu Nome] (estudante, para trabalho escolar).
+- **Autores**: 👤 Arthur Tavares | 👤 Eduardo Sasaki | 👤 Gabriel Flores
 - **Fontes Históricas**: Baseado em fatos reais da Guerra Fria; imagens e dados de domínio público.
 - **Inspirações**: Sites educativos como Khan Academy e documentários da BBC.
 
