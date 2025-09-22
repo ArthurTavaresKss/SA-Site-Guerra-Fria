@@ -92,6 +92,7 @@
   padding: 10px;
   max-height: 300px;
   overflow-y: auto;
+    overflow-x: hidden;
 }
 .li::-webkit-scrollbar {
   width: 8px;
@@ -180,13 +181,6 @@
   background-size: cover;
   position: relative;
   transition: all 0.8s ease-out;
-  opacity: 0;
-  transform: translateY(70px) scale(1);
-}
-.tv-section.apareceu {
-  animation: up 0.5s ease forwards;
-  opacity: 1;
-  transform: translateY(0) scale(1);
 }
 .tv-frame {
   background: linear-gradient(160deg, #5c3a21, #3e2515, #2a170f);
@@ -281,12 +275,12 @@
 }
 .btn-round {
   background: radial-gradient(circle at 30% 30%, #777 0%, #222 80%);
-  color: #00ff7f;
+  color: var(--bege);
   border: 3px solid #111;
   border-radius: 50%;
   width: 80px;
   height: 80px;
-  font-family: "Special Elite", monospace;
+  font-family: "Bebas Neue", monospace;
   font-size: 14px;
   letter-spacing: 1px;
   cursor: pointer;
@@ -310,7 +304,7 @@
 }
 .btn-small {
   background: linear-gradient(145deg, #666, #222);
-  color: #fff;
+  color: var(--bege);
   border: 2px solid #000;
   border-radius: 50%;
   width: 45px;

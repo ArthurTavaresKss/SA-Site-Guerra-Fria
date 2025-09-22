@@ -15,7 +15,7 @@ btn.addEventListener("click", () => {
 });
 // observer para animaçao
 const elementos = document.querySelectorAll(
-  "#title, #subtitle, .btn, .bipolartext, .timeline, .tabelas, .muro, .tv-section, #textconfli, .jornal-container, .saiba"
+  "#title, #subtitle, .btn, .bipolartext, .timeline, .tabelas, .muro, .saiba"
 );
 
 const observer = new IntersectionObserver(
@@ -33,7 +33,26 @@ const observer = new IntersectionObserver(
 elementos.forEach((el) => {
   observer.observe(el);
 });
+//teste
+// Seleciona os elementos internos que vão animar
+const el = document.querySelectorAll(
+  "#titlefimda, .textum, .textdois, .texttres, .textquatro, .textcinco, .textseis, .textsete, .anoum, .anodois, .anotres, .anoquatro, .anocinco, .anoseis, .anosete, .imgum, .imgdois, .imgtres, .imgquatro, .imgcinco, .imgseis, .imgsete"
+);
 
+const obs = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("apareceu");
+      } else {
+        entry.target.classList.remove("apareceu");
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+el.forEach(el => obs.observe(el));
 //botoes de ir para o conteudo
 function irconteudo() {
   const conteudo = document.getElementById("conteudo");
@@ -293,6 +312,8 @@ outer.addEventListener("wheel", (e) => {
 
   updateLine();
 });
+let lastActiveIndex = -1; // guarda último ponto ativo
+
 function updateLine() {
   const maxScroll = outer.scrollWidth - outer.clientWidth;
   const percent = (outer.scrollLeft / maxScroll) * 100;
@@ -302,27 +323,76 @@ function updateLine() {
   const items = document.querySelectorAll(".it");
   const hc = document.querySelector(".horizontal-content");
 
+  let activeIndex = 0;
+
   points.forEach((point, i) => {
     const pointPos = ((i * step) / outer.scrollWidth) * 100;
-
     if (percent >= pointPos) {
-      point.classList.add("atv");
-
-      const bg = items[i].dataset.bg;
-
-      if (bg.startsWith("url")) {
-        // se for imagem
-        hc.style.backgroundImage = bg;
-        hc.style.backgroundSize = "cover";
-        hc.style.backgroundPosition = "center";
-        hc.style.backgroundRepeat = "no-repeat";
-        hc.style.backgroundAttachment = "fixed"
-      } else {
-        // fallback se for cor
-        hc.style.background = bg;
-      }
-    } else {
-      point.classList.remove("atv");
+      activeIndex = i; // pega o último ponto válido
     }
   });
+
+  // limpa todos
+  points.forEach((p) => p.classList.remove("atv"));
+  // marca só o ativo
+  points[activeIndex].classList.add("atv");
+
+  // só troca se mudou mesmo
+  if (lastActiveIndex !== activeIndex) {
+    lastActiveIndex = activeIndex;
+    const bg = items[activeIndex].dataset.bg;
+
+    if (bg.startsWith("url")) {
+      hc.style.backgroundImage = bg;
+      hc.style.backgroundSize = "cover";
+      hc.style.backgroundPosition = "center";
+      hc.style.backgroundRepeat = "no-repeat";
+      hc.style.backgroundAttachment = "fixed";
+    } else {
+      hc.style.background = bg;
+    }
+  }
 }
+  const btnAjuda = document.getElementById("btnAjuda");
+  const caixaAjuda = document.getElementById("caixaAjuda");
+
+  // Textos de ajuda por seção
+  const instrucoes = {
+    home: "Bem-vindo! Role ou use o menu para navegar entre as seções.",
+    mundobi: "Aqui você entende como o mundo ficou dividido em dois blocos: EUA x URSS.",
+    cortina: "Nesta seção, você descobre sobre a Cortina de Ferro e o isolamento do Leste Europeu.",
+    corridaarma: "Veja como a corrida armamentista elevou as tensões globais.",
+    conflito: "Explore os conflitos indiretos e guerras por influência durante a Guerra Fria.",
+    corridaespacial: "Conheça a disputa pela conquista do espaço entre EUA e URSS.",
+    espionagem: "Descubra como a espionagem foi crucial durante esse período.",
+    descolonizacao: "Aqui você vê como a Guerra Fria influenciou processos de independência.",
+    fimdaguerra: "Veja os acontecimentos que levaram ao fim da Guerra Fria."
+  };
+
+  // Mostrar ou esconder a caixa de ajuda
+  btnAjuda.addEventListener("click", () => {
+    if (caixaAjuda.style.display === "block") {
+      caixaAjuda.style.display = "none";
+    } else {
+      // Descobrir qual seção está mais visível na tela
+      let secaoAtual = "home";
+      const secoes = Object.keys(instrucoes);
+      let menorDistancia = Infinity;
+
+      secoes.forEach(secao => {
+        const el = document.getElementById(secao);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          const dist = Math.abs(rect.top);
+          if (dist < menorDistancia) {
+            menorDistancia = dist;
+            secaoAtual = secao;
+          }
+        }
+      });
+
+      // Mostrar ajuda da seção atual
+      caixaAjuda.innerHTML = instrucoes[secaoAtual];
+      caixaAjuda.style.display = "block";
+    }
+  });

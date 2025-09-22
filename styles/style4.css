@@ -17,8 +17,8 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  border-top: 3px solid var(--gold);
-  border-bottom: 3px solid var(--gold);
+  border-top: 3px double var(--gold);
+  border-bottom: 3px double var(--gold);
   box-shadow: rgba(0, 0, 0, 0.725) 0px 25px 20px -20px;
   z-index: 10;
 }
@@ -57,18 +57,6 @@
     opacity: 1;
   }
 }
-.poster img {
-  width: 300px;
-  border-radius: 6px;
-  box-shadow: 0 8px 20px rgb(0, 0, 0), 0 0 10px rgba(5, 5, 0, 0.478);
-  width: 18vw;
-  max-width: 300px;
-  min-width: 180px;
-  cursor: grab;
-}
-.poster img:active{
-  cursor: grabbing;
-}
 .carrossel {
   width: 100%;
   overflow: hidden;
@@ -81,17 +69,83 @@
   margin-top: 100px;
 }
 .poster {
+  position: relative;
   display: inline-block;
-  margin: 0 30px 50px 30px;
+  margin: 0 2vw 50px 2vw;
   font-size: 2rem;
   color: white;
   transition: all 0.3s ease;
-  margin: 0 2vw 50px 2vw;
+  overflow: hidden;
+}
+.poster img {
+  width: 18vw;
+  max-width: 300px;
+  min-width: 180px;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgb(0, 0, 0), 0 0 10px rgba(5, 5, 0, 0.478);
+  cursor: grab;
+  display: block;
+}
+.poster img:active {
+  cursor: grabbing;
+}
+.poster::before {
+  content: attr(data-desc);
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+  max-width: 90%;
+  opacity: 0;
+  padding: 15px;
+  transition: opacity 0.3s ease;
+  border-radius: 6px;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+.poster:hover::before {
+  opacity: 1;
+  cursor: grab;
+}
+.poster::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+}
+.poster:hover::after {
+  animation: brilho 0.8s forwards;
+  opacity: 1;
 }
 .poster:hover {
   box-shadow: 0 0 25px 5px rgba(255, 201, 100, 0.679);
   transform: translateY(-5px);
-  cursor: pointer;
+  border-radius: 10px;
+}
+@keyframes brilho {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
 }
 @keyframes slide {
   from {
@@ -103,23 +157,45 @@
 }
 #btnmundobi {
   width: 200px;
-  height: 40px;
+  height: 45px;
   border-radius: 8px;
   background: transparent;
   color: var(--bege);
   font-size: 1.3rem;
   cursor: pointer;
   font-family: "Bebas Neue", sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
   border: 3px solid var(--red);
-  letter-spacing: 4px;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden; 
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgb(0, 0, 0), 0 0 10px rgba(0, 0, 0, 0.478);
+}
+#btnmundobi::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+}
+#btnmundobi:hover::after {
+  animation: brilhobtn 0.8s forwards;
+  opacity: 1;
 }
 #btnmundobi:hover {
   background: var(--red);
-  transform: scale(1.05);
+  transform: scale(1.08);
   border: none;
-  box-shadow: 0 0 25px 5px rgba(255, 2, 2, 0.248);
+  color: #fff;
+  box-shadow: 0 0 25px 5px rgba(255, 0, 0, 0.65);
 }
 .btnbipolar {
   display: flex;
@@ -147,32 +223,61 @@
 }
 #btnespac {
   width: 200px;
-  height: 40px;
+  height: 45px;
   border-radius: 8px;
   background: transparent;
   color: var(--bege);
   font-size: 1.3rem;
   cursor: pointer;
   font-family: "Bebas Neue", sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.571) 0px 14px 28px,
-    rgba(0, 0, 0, 0.575) 0px 10px 10px;
-  border: 3px solid var(--gold);
+  border: 3px double var(--gold);
   letter-spacing: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgb(0, 0, 0), 0 0 10px rgba(5, 5, 0, 0.478);
+}
+#btnespac::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+}
+#btnespac:hover::after {
+  animation: brilhobtn 0.8s forwards;
+  opacity: 1;
+}
+@keyframes brilhobtn {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
 }
 #btnespac:hover {
   background: var(--gold);
-  transform: scale(1.09);
+  transform: scale(1.08);
   border: none;
   color: #fff;
-  box-shadow: 0 0 25px 5px rgba(255, 201, 100, 0.248);
+  box-shadow: 0 0 25px 5px rgba(255, 201, 100, 0.65);
 }
 .saiba {
   transition: opacity 0.6s ease, transform 0.6s ease;
   opacity: 0;
-  transform: translateY(40px) scale(1);
+  transform: translateY(20px) scale(1);
 }
 .saiba.apareceu {
-  animation: up 1s ease forwards;
+  animation: up 0.2s ease forwards;
   opacity: 1;
   transform: translateY(0) scale(1);
 }
@@ -186,6 +291,7 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
+  box-shadow: rgba(0, 0, 0, 0.212) 0px -50px 36px -28px inset;
 }
 .pageum.ativo {
   opacity: 1;
@@ -290,21 +396,47 @@
   height: 100vh;
   overflow: hidden;
   z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 .btntv {
   width: 200px;
-  height: 40px;
+  height: 45px;
   margin-top: 40px;
   background: transparent;
   border: 2px solid var(--bege);
   color: var(--bege);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  font-family: "Bebas Neue", sans-serif;
+}
+.btntv::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+}
+
+.btntv:hover::after {
+  animation: brilhobtn 0.8s forwards;
+  opacity: 1;
 }
 .btntv:hover {
-  box-shadow: rgba(0, 0, 0, 0.599) 0px 22px 70px 4px;
+  box-shadow: 0 0 25px 5px rgba(245, 222, 179, 0.45);
   cursor: pointer;
-  transform: scale(1.03);
-  background: var(--paper);
+  transform: scale(1.08);
+  background: var(--bege);
   color: var(--edge);
   font-weight: 700;
 }

@@ -36,6 +36,10 @@
     url("/imgs/fundoarmamentista.png");
   background-position: center;
   background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  position: relative;
+  z-index: 2;
 }
 .mad {
   display: flex;
@@ -43,24 +47,6 @@
   justify-content: center;
   align-items: center;
   margin-top: 60px;
-}
-.btnmad {
-  width: 200px;
-  height: 40px;
-  border-radius: 8px;
-  background: var(--red);
-  color: var(--bege);
-  font-size: 1.3rem;
-  cursor: pointer;
-  font-family: "Bebas Neue", sans-serif;
-  border: none;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-.btnmad:hover {
-  background: transparent;
-  transform: scale(1.09);
-  border: 3px solid var(--red);
 }
 .barras-container {
   width: 80%;
@@ -72,7 +58,6 @@
 .barra {
   font-family: Arial, sans-serif;
 }
-
 .titulo {
   font-size: 24px;
   color: #eee;
@@ -149,40 +134,31 @@
   color: #fff;
 }
 .conflito {
-  background:linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.603)), url('/imgs/bancajornal.png');
-  padding: 20px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.603)),
+    url("/imgs/bancajornal.png");
   background-position: center;
   background-size: cover;
+  height: 120vh;
+  position: relative;
+
 }
 .conflito h1 {
   color: #fff;
   font-family: "Bebas Neue", sans-serif;
   font-size: 4.5rem;
   text-align: center;
-}
-#textconfli {
-  transition: all 0.8s ease-out;
-  opacity: 0;
-  transform: translateY(70px) scale(1);
+  position: absolute;
+  z-index: 4;
+  top:2.5%;
+  left: 38%;
 }
 .jornal-container {
   position: relative;
   width: 60%;
-  margin: auto;
+  margin: 0 auto;
   overflow: hidden;
   transition: all 0.8s ease-out;
-  opacity: 0;
-  transform: translateY(70px) scale(1);
-}
-#textconfli.apareceu {
-  animation: up 0.5s ease forwards;
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-.jornal-container.apareceu {
-  animation: up 0.3s ease forwards;
-  opacity: 1;
-  transform: translateY(0) scale(1);
+  padding-top: 30px;
 }
 .jornal-wrapper {
   display: flex;
@@ -240,6 +216,8 @@
   border: 2px dashed #333;
   background: transparent;
   cursor: pointer;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
 }
 .btnjornal:hover {
   font-weight: 700;
@@ -265,6 +243,6 @@
 .arrow.right {
   right: 0;
 }
-.arrow:active{
+.arrow:active {
   cursor: grabbing;
 }
