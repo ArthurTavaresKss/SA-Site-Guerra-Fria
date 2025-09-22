@@ -57,7 +57,7 @@ O site é dividido em seções temáticas, cada uma com interações únicas imp
    - Destaque visual para a década ativa.
 
 ### 9. Fim da Guerra Fria
-   - Linha do tempo horizontal com scroll via wheel (roda do mouse).
+   - Linha do tempo vertical com scroll via wheel (roda do mouse).
    - Barra de progresso e pontos de checkpoint que mudam o background da seção conforme o avanço.
    - Suporte a múltiplos itens com dados customizados (ex.: background images ou cores).
 
