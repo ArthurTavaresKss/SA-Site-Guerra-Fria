@@ -58,8 +58,8 @@ O site é dividido em seções temáticas, cada uma com interações únicas imp
 
 ### 9. Fim da Guerra Fria
    - Linha do tempo vertical com scroll via wheel (roda do mouse).
-   - Barra de progresso e pontos de checkpoint que mudam o background da seção conforme o avanço.
-   - Suporte a múltiplos itens com dados customizados (ex.: background images ou cores).
+   - Barra vertical e pontos de checkpoint que mudam o background da seção conforme o avanço.
+   - Múltiplos momentos chave da guerra fria.
 
 ### 10. Jornais Históricos
    - Páginas separadas (ex.: `JornalCorridaEspacial.html`) estilizadas como jornais antigos.
