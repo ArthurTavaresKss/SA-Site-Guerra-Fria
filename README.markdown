@@ -148,7 +148,8 @@ Ideias para melhorias:
 
 ## Créditos
 
-- **Autores**: 👤 Arthur Tavares | 👤 Eduardo Sasaki | 👤 Gabriel Flores
+- **Desenvolvimento do site**: 👤 Arthur Tavares | 👤 Eduardo Sasaki
+- **Pesquisa dos conteúdos**: 👤 Davi Moraes | 👤 Henrique Reis | 👤 Gabriel Flores
 - **Fontes Históricas**: Baseado em fatos reais da Guerra Fria; imagens e dados de domínio público.
 - **Inspirações**: Sites educativos como Khan Academy e documentários da BBC.
 
